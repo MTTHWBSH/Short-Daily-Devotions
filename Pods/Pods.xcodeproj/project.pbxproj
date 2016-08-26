@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D831FAC228E1C6B3D113DD220B6FA9C /* Pods-Short Daily Devotions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9411892147ABAA2DFC2E78F9E7CDEA /* Pods-Short Daily Devotions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1631B6D0BBC25DCAD205BB25488A2806 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0C8CBB61547456F42E2547704FD117 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18F793E217D65B9131FCF5542846B15B /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A82090B09CCFFF21A5053351E4149071 /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1D586654EFDD8EB0D38D9ADB23252C04 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9E8AF6FFA23ECACAD828ADD2209CD2 /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		26F3C39C99AD1736C4E1CFFE8A0E218B /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2A132CE0EF59FF221D3641D143A4DB /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		528BDC7D1B3503D6519C380CA40F164E /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13E4F2F9720B2C46E42A57F44062D2 /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		56EFBB8BFFA6DCD6543BEEC6AF55BAE4 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AB031EF8C7791B5FEDF16E96701BBCE9 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57E69C641287BC191C9635E467CA7A5C /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 45612BE30BB05CBA01564B5EC9364E26 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74C7972B94CBECD0C28878D9B9D20726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7CB7DC4B1D2178241C86BB678CB75FC2 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF7E020E88A5000CB5D67125AB2ED9C /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3E905F1EB114B91CC2FFE11CA92E505 /* Pods-Short Daily Devotions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D22470AA2A209AF781D79FC28453EB8 /* Pods-Short Daily Devotions-dummy.m */; };
+		D18BD25F770767D7BF4B5E696D0D5811 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B12913C04F2294DE30D72D2FBA70D853 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E208CA2266CD7D4DF135D7482CE602A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		E5EEE77F136B796AE12D80D7A43584E1 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B0CC6C67F203D22A3272CFE4FEFC91C /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE479DA4A9D7D1B809796AE01C8AFEFC /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F5F96097C0642EE8E6F1344D0B5FE3 /* PureLayout-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1F276DDB3DD13ABEB0CF47CEC219A96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90AF04E91BF45FBB6CE86942526C313C;
+			remoteInfo = PureLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AF800BB583B778B14B7B44F7DD5500 /* GGLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLCore.framework; path = Frameworks/GGLCore.framework; sourceTree = "<group>"; };
+		0D1A90A40132E260899BD7BBC873DE19 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Sources/GAI.h; sourceTree = "<group>"; };
+		1D2A132CE0EF59FF221D3641D143A4DB /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		20D9D122FCF730CA4C28FF040E18B106 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Sources/GAILogger.h; sourceTree = "<group>"; };
+		22964831D99A087786DDF2A0C90CBD99 /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
+		24EEC199D4505225761175534C9D5B0A /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Sources/GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		29A2607A96ABC1B134E77357680E075F /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		2A8CE332610EACBCBC31BE009793EE81 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		2DE75F40384406EB88C69CD0068A1DF4 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		3203394EFB9B4B0A43051A9E9B6D7383 /* GGLAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLAnalytics.framework; path = Frameworks/GGLAnalytics.framework; sourceTree = "<group>"; };
+		3D22470AA2A209AF781D79FC28453EB8 /* Pods-Short Daily Devotions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Short Daily Devotions-dummy.m"; sourceTree = "<group>"; };
+		3F9AF256135DA667F13A97F4D1A471B0 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		45612BE30BB05CBA01564B5EC9364E26 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		471B17D3B9E2C92950A205D4B07187EA /* Pods_Short_Daily_Devotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Short_Daily_Devotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		475E94CD331456B5177A05D06551FD19 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		4DF5997AC00722A93D82E4CEE9C1DAE1 /* Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Instabug.h; path = Instabug.framework/Versions/A/Headers/Instabug.h; sourceTree = "<group>"; };
+		4E5343BD105EBA933270C1A1DE5A2A39 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		4F26B3C0314FB6C422467931C9F84045 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		5EE4E078E0E44BF7E3BA1248AD6CFA52 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Sources/GAITracker.h; sourceTree = "<group>"; };
+		65F867CD9C2EC4915950E6CAACCD2FFE /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
+		6B0CC6C67F203D22A3272CFE4FEFC91C /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		6B623FAD86C2FB79E42EAC1F0F4F3E0D /* Pods-Short Daily Devotions-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Short Daily Devotions-resources.sh"; sourceTree = "<group>"; };
+		6DC2357C44341E1E0251ED556F1C3ECA /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
+		7321E76FE7D1C95977F3E6B68632F995 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0C8CBB61547456F42E2547704FD117 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		7F92559EFFB2B02F6AC7A9E2FF1F6B95 /* Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Analytics.h; path = Headers/Analytics.h; sourceTree = "<group>"; };
+		82948E68F5C13E6123EFB82562CD8C62 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Sources/GAIEcommerceFields.h; sourceTree = "<group>"; };
+		85C47A14C89C769676EF1E637F2482CF /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		88DEA6A599CDD209A30BE37B0E46E36F /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
+		8B9E8AF6FFA23ECACAD828ADD2209CD2 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		8EF7E020E88A5000CB5D67125AB2ED9C /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A0BC5A6BD1DBC07AB7DBA609448F86F /* Pods-Short Daily Devotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Short Daily Devotions.release.xcconfig"; sourceTree = "<group>"; };
+		9E3AF230477EF82210B0C598ACAA4C25 /* Instabug.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Instabug.bundle; sourceTree = "<group>"; };
+		A82090B09CCFFF21A5053351E4149071 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		AA77A3BB53A31CF1B51623F22870B6EC /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Sources/GAITrackedViewController.h; sourceTree = "<group>"; };
+		AA9411892147ABAA2DFC2E78F9E7CDEA /* Pods-Short Daily Devotions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Short Daily Devotions-umbrella.h"; sourceTree = "<group>"; };
+		AB031EF8C7791B5FEDF16E96701BBCE9 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		AF524A1B34ACC8080CBAE06BDDE5FC8B /* Pods-Short Daily Devotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Short Daily Devotions.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F5F96097C0642EE8E6F1344D0B5FE3 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		B12913C04F2294DE30D72D2FBA70D853 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		B1DD65EA298AE1639284B39F25A99496 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Sources/GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		B2D349B805461E10DFCD164B6715E6AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72E01CDBFCA1ABCFBE611AF808EE558 /* Pods-Short Daily Devotions-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Short Daily Devotions-acknowledgements.plist"; sourceTree = "<group>"; };
+		B97B99F9313378303DEFCAD82F90B98D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA770307525B67C1C579D8C693ECE703 /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Sources/GAIFields.h; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D018EB8199BE24B45AA141B3D4FFD8DD /* Pods-Short Daily Devotions-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Short Daily Devotions-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D614ECBA47985F415D11453408CB56EA /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Sources/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		DBA85DBA378190543B0E37557136583D /* Pods-Short Daily Devotions-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Short Daily Devotions-frameworks.sh"; sourceTree = "<group>"; };
+		EA6D93FD13B2F7B3BCF3328BE92E640B /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Sources/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		EAB3B68E425168762AF33C77A7B99F34 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		F66B722E833854CC86456D36F19B8436 /* IBGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGEnums.h; path = Instabug.framework/Versions/A/Headers/IBGEnums.h; sourceTree = "<group>"; };
+		FC13E4F2F9720B2C46E42A57F44062D2 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		FE37FAFEB44FE68752CE0B5B57D69C58 /* Pods-Short Daily Devotions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Short Daily Devotions.modulemap"; sourceTree = "<group>"; };
+		FE997D3CD85D34B1788EBDEDA3A182EA /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/Core.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D0D63552D8866C686B1DF81C4E05EB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E208CA2266CD7D4DF135D7482CE602A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD7CC9D85EE81CA960AC574C09B1CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C7972B94CBECD0C28878D9B9D20726 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01E725641C53B2D21A2A1A4DA5591669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3203394EFB9B4B0A43051A9E9B6D7383 /* GGLAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DD284B017D154A53EDE368815F766F0 /* Pods-Short Daily Devotions */ = {
+			isa = PBXGroup;
+			children = (
+				B2D349B805461E10DFCD164B6715E6AE /* Info.plist */,
+				FE37FAFEB44FE68752CE0B5B57D69C58 /* Pods-Short Daily Devotions.modulemap */,
+				D018EB8199BE24B45AA141B3D4FFD8DD /* Pods-Short Daily Devotions-acknowledgements.markdown */,
+				B72E01CDBFCA1ABCFBE611AF808EE558 /* Pods-Short Daily Devotions-acknowledgements.plist */,
+				3D22470AA2A209AF781D79FC28453EB8 /* Pods-Short Daily Devotions-dummy.m */,
+				DBA85DBA378190543B0E37557136583D /* Pods-Short Daily Devotions-frameworks.sh */,
+				6B623FAD86C2FB79E42EAC1F0F4F3E0D /* Pods-Short Daily Devotions-resources.sh */,
+				AA9411892147ABAA2DFC2E78F9E7CDEA /* Pods-Short Daily Devotions-umbrella.h */,
+				AF524A1B34ACC8080CBAE06BDDE5FC8B /* Pods-Short Daily Devotions.debug.xcconfig */,
+				9A0BC5A6BD1DBC07AB7DBA609448F86F /* Pods-Short Daily Devotions.release.xcconfig */,
+			);
+			name = "Pods-Short Daily Devotions";
+			path = "Target Support Files/Pods-Short Daily Devotions";
+			sourceTree = "<group>";
+		};
+		12D7B5325A2FA8B8775859796C8F5365 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A808F9A8B6C6522CAECA6836CC24F1A8 /* FirebaseAnalytics */,
+				A249CE0F2DBB870098187D2D81B5549D /* FirebaseInstanceID */,
+				ED01A6C122C2068A3F37003CD78C6CFA /* Google */,
+				D23C929147114BF999AFFD3299F0DDD6 /* GoogleAnalytics */,
+				661835B81C5032B95979EE74E804452E /* GoogleInterchangeUtilities */,
+				3BB1A630DFD1E6C349FF4F3814DF7F95 /* GoogleSymbolUtilities */,
+				F196127DB7226CADFDA918CE26EA9D7B /* GoogleUtilities */,
+				C7130662B907AA1855EB6B31E6EC04A6 /* Instabug */,
+				A50E2F8E73ED0B3F8AFE86EC473BFBAD /* PureLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		17343E774114EC1D8412E8BD5FBE8DC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AF800BB583B778B14B7B44F7DD5500 /* GGLCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FBA590618C87D401171E95433D88525 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DD284B017D154A53EDE368815F766F0 /* Pods-Short Daily Devotions */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2CE81DBBD9F2933DA6B2A487904C2B66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F26B3C0314FB6C422467931C9F84045 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		309E2F449052724A854B78C340BE775E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6DC2357C44341E1E0251ED556F1C3ECA /* Analytics-Module.h */,
+				FE997D3CD85D34B1788EBDEDA3A182EA /* Core.h */,
+				22964831D99A087786DDF2A0C90CBD99 /* Core-Module.h */,
+				65F867CD9C2EC4915950E6CAACCD2FFE /* SignIn-Module.h */,
+				17343E774114EC1D8412E8BD5FBE8DC4 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		39536DC91BA4ACF40294AA9A905A2005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F9AF256135DA667F13A97F4D1A471B0 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BB1A630DFD1E6C349FF4F3814DF7F95 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				D1CF08DC304EE40A6AF076622FBBC573 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		661835B81C5032B95979EE74E804452E /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				2CE81DBBD9F2933DA6B2A487904C2B66 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		684D4F363FE0BD1BBED1509E85379532 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DE75F40384406EB88C69CD0068A1DF4 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69147888A77469CC8E704E633677EF42 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				7F92559EFFB2B02F6AC7A9E2FF1F6B95 /* Analytics.h */,
+				01E725641C53B2D21A2A1A4DA5591669 /* Frameworks */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				12D7B5325A2FA8B8775859796C8F5365 /* Pods */,
+				EB4929510F65FFDDB8B1AA0831E19F6B /* Products */,
+				1FBA590618C87D401171E95433D88525 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		94620842B4DA8DFF296433D0688750F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E3AF230477EF82210B0C598ACAA4C25 /* Instabug.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9B7888B44D77EBB6A0697AB3FF8DCBBE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B97B99F9313378303DEFCAD82F90B98D /* Info.plist */,
+				29A2607A96ABC1B134E77357680E075F /* PureLayout.modulemap */,
+				4E5343BD105EBA933270C1A1DE5A2A39 /* PureLayout.xcconfig */,
+				B0F5F96097C0642EE8E6F1344D0B5FE3 /* PureLayout-dummy.m */,
+				475E94CD331456B5177A05D06551FD19 /* PureLayout-prefix.pch */,
+				B12913C04F2294DE30D72D2FBA70D853 /* PureLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
+			sourceTree = "<group>";
+		};
+		A249CE0F2DBB870098187D2D81B5549D /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				EAB3B68E425168762AF33C77A7B99F34 /* FIRInstanceID.h */,
+				39536DC91BA4ACF40294AA9A905A2005 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		A50E2F8E73ED0B3F8AFE86EC473BFBAD /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6B0CC6C67F203D22A3272CFE4FEFC91C /* ALView+PureLayout.h */,
+				8B9E8AF6FFA23ECACAD828ADD2209CD2 /* ALView+PureLayout.m */,
+				7B0C8CBB61547456F42E2547704FD117 /* NSArray+PureLayout.h */,
+				FC13E4F2F9720B2C46E42A57F44062D2 /* NSArray+PureLayout.m */,
+				45612BE30BB05CBA01564B5EC9364E26 /* NSLayoutConstraint+PureLayout.h */,
+				A82090B09CCFFF21A5053351E4149071 /* NSLayoutConstraint+PureLayout.m */,
+				8EF7E020E88A5000CB5D67125AB2ED9C /* PureLayout.h */,
+				AB031EF8C7791B5FEDF16E96701BBCE9 /* PureLayout+Internal.h */,
+				1D2A132CE0EF59FF221D3641D143A4DB /* PureLayoutDefines.h */,
+				9B7888B44D77EBB6A0697AB3FF8DCBBE /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		A808F9A8B6C6522CAECA6836CC24F1A8 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE775106F3B5FA01E79FA3321D8D00 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7130662B907AA1855EB6B31E6EC04A6 /* Instabug */ = {
+			isa = PBXGroup;
+			children = (
+				F66B722E833854CC86456D36F19B8436 /* IBGEnums.h */,
+				4DF5997AC00722A93D82E4CEE9C1DAE1 /* Instabug.h */,
+				94620842B4DA8DFF296433D0688750F0 /* Resources */,
+			);
+			path = Instabug;
+			sourceTree = "<group>";
+		};
+		D1CF08DC304EE40A6AF076622FBBC573 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85C47A14C89C769676EF1E637F2482CF /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D23C929147114BF999AFFD3299F0DDD6 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				0D1A90A40132E260899BD7BBC873DE19 /* GAI.h */,
+				D614ECBA47985F415D11453408CB56EA /* GAIDictionaryBuilder.h */,
+				82948E68F5C13E6123EFB82562CD8C62 /* GAIEcommerceFields.h */,
+				24EEC199D4505225761175534C9D5B0A /* GAIEcommerceProduct.h */,
+				EA6D93FD13B2F7B3BCF3328BE92E640B /* GAIEcommerceProductAction.h */,
+				B1DD65EA298AE1639284B39F25A99496 /* GAIEcommercePromotion.h */,
+				CA770307525B67C1C579D8C693ECE703 /* GAIFields.h */,
+				20D9D122FCF730CA4C28FF040E18B106 /* GAILogger.h */,
+				AA77A3BB53A31CF1B51623F22870B6EC /* GAITrackedViewController.h */,
+				5EE4E078E0E44BF7E3BA1248AD6CFA52 /* GAITracker.h */,
+				F01AB1FB56DFE4768C20A982E05FA250 /* Frameworks */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		EB4929510F65FFDDB8B1AA0831E19F6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				471B17D3B9E2C92950A205D4B07187EA /* Pods_Short_Daily_Devotions.framework */,
+				7321E76FE7D1C95977F3E6B68632F995 /* PureLayout.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBE775106F3B5FA01E79FA3321D8D00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A8CE332610EACBCBC31BE009793EE81 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED01A6C122C2068A3F37003CD78C6CFA /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				69147888A77469CC8E704E633677EF42 /* Analytics */,
+				309E2F449052724A854B78C340BE775E /* Core */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		F01AB1FB56DFE4768C20A982E05FA250 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88DEA6A599CDD209A30BE37B0E46E36F /* libGoogleAnalytics.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F196127DB7226CADFDA918CE26EA9D7B /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				684D4F363FE0BD1BBED1509E85379532 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DE4CACD304099EAD7EDB262C9751D1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D831FAC228E1C6B3D113DD220B6FA9C /* Pods-Short Daily Devotions-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E970181D4A4D3FE6CF3B5BFF91E76D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5EEE77F136B796AE12D80D7A43584E1 /* ALView+PureLayout.h in Headers */,
+				1631B6D0BBC25DCAD205BB25488A2806 /* NSArray+PureLayout.h in Headers */,
+				57E69C641287BC191C9635E467CA7A5C /* NSLayoutConstraint+PureLayout.h in Headers */,
+				56EFBB8BFFA6DCD6543BEEC6AF55BAE4 /* PureLayout+Internal.h in Headers */,
+				D18BD25F770767D7BF4B5E696D0D5811 /* PureLayout-umbrella.h in Headers */,
+				7CB7DC4B1D2178241C86BB678CB75FC2 /* PureLayout.h in Headers */,
+				26F3C39C99AD1736C4E1CFFE8A0E218B /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		90AF04E91BF45FBB6CE86942526C313C /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E743BAD96E71C4062907F2154861ECBC /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				0D53B6321BEDB242A7CD8569F8FF6D0B /* Sources */,
+				0D0D63552D8866C686B1DF81C4E05EB6 /* Frameworks */,
+				4E970181D4A4D3FE6CF3B5BFF91E76D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 7321E76FE7D1C95977F3E6B68632F995 /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBC1E4B30B111FC28D5F573E48BFBBC3 /* Pods-Short Daily Devotions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7202EFCF7B4425FFFAA9BEAB3AF7F34A /* Build configuration list for PBXNativeTarget "Pods-Short Daily Devotions" */;
+			buildPhases = (
+				4FD229929491B1F6879C5C8E5F6824FB /* Sources */,
+				9BD7CC9D85EE81CA960AC574C09B1CF3 /* Frameworks */,
+				3DE4CACD304099EAD7EDB262C9751D1C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF8911BEDD40435A84A70F0F7EA75322 /* PBXTargetDependency */,
+			);
+			name = "Pods-Short Daily Devotions";
+			productName = "Pods-Short Daily Devotions";
+			productReference = 471B17D3B9E2C92950A205D4B07187EA /* Pods_Short_Daily_Devotions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EB4929510F65FFDDB8B1AA0831E19F6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBC1E4B30B111FC28D5F573E48BFBBC3 /* Pods-Short Daily Devotions */,
+				90AF04E91BF45FBB6CE86942526C313C /* PureLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D53B6321BEDB242A7CD8569F8FF6D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D586654EFDD8EB0D38D9ADB23252C04 /* ALView+PureLayout.m in Sources */,
+				528BDC7D1B3503D6519C380CA40F164E /* NSArray+PureLayout.m in Sources */,
+				18F793E217D65B9131FCF5542846B15B /* NSLayoutConstraint+PureLayout.m in Sources */,
+				EE479DA4A9D7D1B809796AE01C8AFEFC /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD229929491B1F6879C5C8E5F6824FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E905F1EB114B91CC2FFE11CA92E505 /* Pods-Short Daily Devotions-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF8911BEDD40435A84A70F0F7EA75322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 90AF04E91BF45FBB6CE86942526C313C /* PureLayout */;
+			targetProxy = E1F276DDB3DD13ABEB0CF47CEC219A96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8B97D2643113C6C1542CB0F55273F0E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0BC5A6BD1DBC07AB7DBA609448F86F /* Pods-Short Daily Devotions.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Short Daily Devotions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Short_Daily_Devotions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEB9639AD19DA4DF0B139C3D6F6172C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5343BD105EBA933270C1A1DE5A2A39 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA719597875753D996B0B1C797F70016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5343BD105EBA933270C1A1DE5A2A39 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6B0AE742F41651943FE9FE269710A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF524A1B34ACC8080CBAE06BDDE5FC8B /* Pods-Short Daily Devotions.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Short Daily Devotions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Short_Daily_Devotions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7202EFCF7B4425FFFAA9BEAB3AF7F34A /* Build configuration list for PBXNativeTarget "Pods-Short Daily Devotions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B0AE742F41651943FE9FE269710A37 /* Debug */,
+				8B97D2643113C6C1542CB0F55273F0E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E743BAD96E71C4062907F2154861ECBC /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA719597875753D996B0B1C797F70016 /* Debug */,
+				BEB9639AD19DA4DF0B139C3D6F6172C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

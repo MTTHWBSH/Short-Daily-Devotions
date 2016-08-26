@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A345A1D70C21700BB6FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34591D70C21700BB6FA0 /* ViewController.swift */; };
 		4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A345B1D70C21700BB6FA0 /* Main.storyboard */; };
@@ -49,6 +50,9 @@
 		4D8A34761D70C21700BB6FA0 /* Short Daily DevotionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Short Daily DevotionsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A347A1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Short_Daily_DevotionsUITests.swift; sourceTree = "<group>"; };
 		4D8A347C1D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Short_Daily_Devotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				4D8A346E1D70C21700BB6FA0 /* Short Daily DevotionsTests */,
 				4D8A34791D70C21700BB6FA0 /* Short Daily DevotionsUITests */,
 				4D8A34551D70C21700BB6FA0 /* Products */,
+				52807AC57CB8B9800EFA783C /* Pods */,
+				577D4AE190F32F0149924037 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,23 @@
 			path = "Short Daily DevotionsUITests";
 			sourceTree = "<group>";
 		};
+		52807AC57CB8B9800EFA783C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */,
+				A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		577D4AE190F32F0149924037 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D8A347F1D70C21700BB6FA0 /* Build configuration list for PBXNativeTarget "Short Daily Devotions" */;
 			buildPhases = (
+				5B0BAD51EF900C7363C709F7 /* [CP] Check Pods Manifest.lock */,
 				4D8A34501D70C21700BB6FA0 /* Sources */,
 				4D8A34511D70C21700BB6FA0 /* Frameworks */,
 				4D8A34521D70C21700BB6FA0 /* Resources */,
+				6C37C1222A2311E018875265 /* [CP] Embed Pods Frameworks */,
+				1386A99CF416DAA504AD1E06 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1386A99CF416DAA504AD1E06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B0BAD51EF900C7363C709F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C37C1222A2311E018875265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D8A34501D70C21700BB6FA0 /* Sources */ = {
@@ -403,6 +478,7 @@
 		};
 		4D8A34801D70C21700BB6FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
@@ -414,6 +490,7 @@
 		};
 		4D8A34811D70C21700BB6FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
@@ -488,6 +565,7 @@
 				4D8A34811D70C21700BB6FA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D8A34821D70C21700BB6FA0 /* Build configuration list for PBXNativeTarget "Short Daily DevotionsTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +574,7 @@
 				4D8A34841D70C21700BB6FA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D8A34851D70C21700BB6FA0 /* Build configuration list for PBXNativeTarget "Short Daily DevotionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +583,7 @@
 				4D8A34871D70C21700BB6FA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
