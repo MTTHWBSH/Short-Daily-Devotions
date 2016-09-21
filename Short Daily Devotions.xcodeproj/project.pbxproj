@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
-		4D8A345A1D70C21700BB6FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34591D70C21700BB6FA0 /* ViewController.swift */; };
 		4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A345B1D70C21700BB6FA0 /* Main.storyboard */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
 		4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34611D70C21700BB6FA0 /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D8A34591D70C21700BB6FA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D8A345C1D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
 		4D8A34611D70C21700BB6FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,13 +104,11 @@
 		4D8A34561D70C21700BB6FA0 /* Short Daily Devotions */ = {
 			isa = PBXGroup;
 			children = (
-				4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */,
-				4D8A34591D70C21700BB6FA0 /* ViewController.swift */,
-				4D8A345B1D70C21700BB6FA0 /* Main.storyboard */,
-				4D8A34611D70C21700BB6FA0 /* Assets.xcassets */,
-				4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */,
-				4D8A34661D70C21700BB6FA0 /* Info.plist */,
-				4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */,
+				76AAD2661D723F5600DBEA3D /* Controllers */,
+				76AAD2651D723F2D00DBEA3D /* Storyboards */,
+				76AAD2641D723F2100DBEA3D /* Assets */,
+				76AAD2631D723F1B00DBEA3D /* Utilities */,
+				76AAD2621D723F1600DBEA3D /* Supporting Files */,
 			);
 			path = "Short Daily Devotions";
 			sourceTree = "<group>";
@@ -150,6 +146,47 @@
 				6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76AAD2621D723F1600DBEA3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */,
+				4D8A34661D70C21700BB6FA0 /* Info.plist */,
+				4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76AAD2631D723F1B00DBEA3D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		76AAD2641D723F2100DBEA3D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A34611D70C21700BB6FA0 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		76AAD2651D723F2D00DBEA3D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */,
+				4D8A345B1D70C21700BB6FA0 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		76AAD2661D723F5600DBEA3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,13 +260,16 @@
 				TargetAttributes = {
 					4D8A34531D70C21700BB6FA0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					4D8A346A1D70C21700BB6FA0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4D8A34531D70C21700BB6FA0;
 					};
 					4D8A34751D70C21700BB6FA0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4D8A34531D70C21700BB6FA0;
 					};
 				};
@@ -334,7 +374,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D8A345A1D70C21700BB6FA0 /* ViewController.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 			);
@@ -485,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-Devotions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -497,6 +537,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-Devotions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -508,6 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Short Daily Devotions.app/Short Daily Devotions";
 			};
 			name = Debug;
@@ -520,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Short Daily Devotions.app/Short Daily Devotions";
 			};
 			name = Release;
@@ -531,6 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Short Daily Devotions";
 			};
 			name = Debug;
@@ -542,6 +586,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Short Daily Devotions";
 			};
 			name = Release;
