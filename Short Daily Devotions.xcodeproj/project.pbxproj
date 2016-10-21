@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */; };
+		4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296301DBA8CCE0016BE5A /* Constants.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A345B1D70C21700BB6FA0 /* Main.storyboard */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D3296301DBA8CCE0016BE5A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D8A345C1D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		76AAD2631D723F1B00DBEA3D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4D3296301DBA8CCE0016BE5A /* Constants.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -349,7 +352,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C37C1222A2311E018875265 /* [CP] Embed Pods Frameworks */ = {
@@ -376,6 +379,7 @@
 			files = (
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
+				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

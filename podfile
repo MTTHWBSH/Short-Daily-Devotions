@@ -4,7 +4,7 @@ use_frameworks!
 
 def all_pods
 	pod 'PureLayout'
-    pod 'Instabug'
+    pod 'Alamofire'
     pod 'Google/Analytics'
 end
 
