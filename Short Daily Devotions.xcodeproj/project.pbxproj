@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */; };
 		4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296301DBA8CCE0016BE5A /* Constants.swift */; };
+		4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296321DBA94850016BE5A /* PostsViewController.swift */; };
+		4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296351DBA95130016BE5A /* PostsViewModel.swift */; };
+		4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296371DBA95430016BE5A /* ViewModel.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A345B1D70C21700BB6FA0 /* Main.storyboard */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
@@ -37,13 +40,16 @@
 
 /* Begin PBXFileReference section */
 		4D3296301DBA8CCE0016BE5A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
+		4D3296321DBA94850016BE5A /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewController.swift; path = Controllers/PostsViewController.swift; sourceTree = "<group>"; };
+		4D3296351DBA95130016BE5A /* PostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewModel.swift; path = "View Models/PostsViewModel.swift"; sourceTree = "<group>"; };
+		4D3296371DBA95430016BE5A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "View Models/ViewModel.swift"; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		4D8A345C1D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
 		4D8A34611D70C21700BB6FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D8A34641D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4D8A34661D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8A34661D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		4D8A346B1D70C21700BB6FA0 /* Short Daily DevotionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Short Daily DevotionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A346F1D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Short_Daily_DevotionsTests.swift; sourceTree = "<group>"; };
 		4D8A34711D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3296341DBA94FE0016BE5A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D3296351DBA95130016BE5A /* PostsViewModel.swift */,
+				4D3296371DBA95430016BE5A /* ViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 		4D8A344B1D70C21700BB6FA0 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +121,7 @@
 		4D8A34561D70C21700BB6FA0 /* Short Daily Devotions */ = {
 			isa = PBXGroup;
 			children = (
+				4D3296341DBA94FE0016BE5A /* View Models */,
 				76AAD2661D723F5600DBEA3D /* Controllers */,
 				76AAD2651D723F2D00DBEA3D /* Storyboards */,
 				76AAD2641D723F2100DBEA3D /* Assets */,
@@ -188,6 +204,7 @@
 		76AAD2661D723F5600DBEA3D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D3296321DBA94850016BE5A /* PostsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,11 +275,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Matt Bush";
 				TargetAttributes = {
 					4D8A34531D70C21700BB6FA0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 726J23ESFP;
 						LastSwiftMigration = 0800;
 					};
 					4D8A346A1D70C21700BB6FA0 = {
@@ -377,8 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
+				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
+				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,8 +469,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -471,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,8 +517,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -511,9 +536,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -523,10 +549,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 726J23ESFP;
 				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-Devotions";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -536,10 +564,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 726J23ESFP;
 				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-Devotions";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -551,7 +581,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Short Daily DevotionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Short Daily Devotions.app/Short Daily Devotions";
@@ -564,7 +594,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Short Daily DevotionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Short Daily Devotions.app/Short Daily Devotions";
@@ -576,7 +606,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Short Daily DevotionsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Short Daily Devotions";
@@ -588,7 +618,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Short Daily DevotionsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mtthwbsh.Short-Daily-DevotionsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Short Daily Devotions";
