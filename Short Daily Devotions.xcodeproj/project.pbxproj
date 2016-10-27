@@ -13,7 +13,6 @@
 		4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296351DBA95130016BE5A /* PostsViewModel.swift */; };
 		4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296371DBA95430016BE5A /* ViewModel.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
-		4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A345B1D70C21700BB6FA0 /* Main.storyboard */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
 		4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34611D70C21700BB6FA0 /* Assets.xcassets */; };
 		4D8A34651D70C21700BB6FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		4D3296371DBA95430016BE5A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "View Models/ViewModel.swift"; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
-		4D8A345C1D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
 		4D8A34611D70C21700BB6FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D8A34641D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */,
-				4D8A345B1D70C21700BB6FA0 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 			files = (
 				4D8A34651D70C21700BB6FA0 /* LaunchScreen.storyboard in Resources */,
 				4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */,
-				4D8A345D1D70C21700BB6FA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +432,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D8A345B1D70C21700BB6FA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D8A345C1D70C21700BB6FA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -552,7 +540,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 726J23ESFP;
-				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
+				INFOPLIST_FILE = "Short Daily Devotions/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,7 +555,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 726J23ESFP;
-				INFOPLIST_FILE = "Short Daily Devotions/Info.plist";
+				INFOPLIST_FILE = "Short Daily Devotions/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtthwbsh.ShortDailyDevotions;
 				PRODUCT_NAME = "$(TARGET_NAME)";

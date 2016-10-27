@@ -9,4 +9,4 @@
 // MARK: URLs
 
 let kBaseURL = "http://shortdailydevotions.com/wp-json/wp/v2"
-let kPostsURL = "\(kBaseURL)/posts"
+let kAllPostsURL = "\(kBaseURL)/posts"

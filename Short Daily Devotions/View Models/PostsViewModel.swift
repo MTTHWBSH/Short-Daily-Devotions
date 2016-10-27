@@ -17,7 +17,7 @@ class PostsViewModel: ViewModel {
     
     private func loadPosts(postsURL: String) {
         Alamofire.request(postsURL).responseJSON { response in
-            
+            print(response)
         }
     }
     
