@@ -537,7 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 726J23ESFP;
 				INFOPLIST_FILE = "Short Daily Devotions/Supporting Files/Info.plist";
@@ -552,7 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 726J23ESFP;
 				INFOPLIST_FILE = "Short Daily Devotions/Supporting Files/Info.plist";
@@ -566,6 +566,7 @@
 		4D8A34831D70C21700BB6FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Short Daily DevotionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -579,6 +580,7 @@
 		4D8A34841D70C21700BB6FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Short Daily DevotionsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

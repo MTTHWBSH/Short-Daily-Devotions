@@ -3,8 +3,9 @@ inhibit_all_warnings!
 use_frameworks!
 
 def all_pods
-	pod 'PureLayout'
     pod 'Alamofire'
+    pod "ModelMapper"
+    pod 'PureLayout'
     pod 'Google/Analytics'
 end
 
