@@ -22,12 +22,14 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - Kanna (2.0.0)
   - ModelMapper (5.0.0)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - Google/Analytics
+  - Kanna
   - ModelMapper
   - PureLayout
 
@@ -41,9 +43,10 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  Kanna: 9a6637f72f5c77fe9c045b1efb2a5bb074754af8
   ModelMapper: 89ced1f51ec6360e93f6889d08c818d4cad526a3
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: d1e3ffe0b08e51d8429488944c2d95dfbf49006a
+PODFILE CHECKSUM: 2bd5a3420a9084c00155a94eef0f4afc05b5c45a
 
 COCOAPODS: 1.1.1

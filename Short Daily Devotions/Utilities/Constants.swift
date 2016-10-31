@@ -6,7 +6,18 @@
 //  Copyright © 2016 Matt Bush. All rights reserved.
 //
 
-// MARK: URLs
+struct Constants {
 
-let kBaseURL = "http://shortdailydevotions.com/wp-json/wp/v2"
-let kAllPostsURL = "\(kBaseURL)/posts"
+    // MARK: URLs
+
+    static let kBaseURL = "http://shortdailydevotions.com/wp-json/wp/v2"
+    static let kAllPostsURL = "\(kBaseURL)/posts"
+        
+    // MARK: Font names
+        
+    static let kRegularFontName = "Lato-Regular"
+    static let kLightFontName = "Lato-Light"
+    static let kLightItalicFontName = "Lato-LightItalic"
+    static let kBoldFontName = "Lato-Bold"
+
+}

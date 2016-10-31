@@ -18,6 +18,14 @@
 		4D8A34651D70C21700BB6FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */; };
 		4D8A34701D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A346F1D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift */; };
 		4D8A347B1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A347A1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift */; };
+		764C8F3B1DC6C65C006CA325 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3A1DC6C65C006CA325 /* NavigationController.swift */; };
+		764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3C1DC6CB51006CA325 /* Configuration.swift */; };
+		769F48571DC6A92900554487 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48561DC6A92900554487 /* Style.swift */; };
+		769F485E1DC6B18600554487 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485A1DC6B18600554487 /* Lato-Light.ttf */; };
+		769F485F1DC6B18600554487 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485B1DC6B18600554487 /* Lato-Bold.ttf */; };
+		769F48601DC6B18600554487 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485C1DC6B18600554487 /* Lato-LightItalic.ttf */; };
+		769F48611DC6B18600554487 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485D1DC6B18600554487 /* Lato-Regular.ttf */; };
+		769F48631DC6B3C800554487 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48621DC6B3C800554487 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +53,7 @@
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
-		4D8A34611D70C21700BB6FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D8A34611D70C21700BB6FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Assets.xcassets; sourceTree = "<group>"; };
 		4D8A34641D70C21700BB6FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D8A34661D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		4D8A346B1D70C21700BB6FA0 /* Short Daily DevotionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Short Daily DevotionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +64,14 @@
 		4D8A347C1D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.debug.xcconfig"; sourceTree = "<group>"; };
 		6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Short_Daily_Devotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		764C8F3A1DC6C65C006CA325 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Utilities/NavigationController.swift; sourceTree = "<group>"; };
+		764C8F3C1DC6CB51006CA325 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Utilities/Configuration.swift; sourceTree = "<group>"; };
+		769F48561DC6A92900554487 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Utilities/Style.swift; sourceTree = "<group>"; };
+		769F485A1DC6B18600554487 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Assets/Lato-Light.ttf"; sourceTree = "<group>"; };
+		769F485B1DC6B18600554487 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Assets/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		769F485C1DC6B18600554487 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "Assets/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		769F485D1DC6B18600554487 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "Assets/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		769F48621DC6B3C800554487 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +135,8 @@
 		4D8A34561D70C21700BB6FA0 /* Short Daily Devotions */ = {
 			isa = PBXGroup;
 			children = (
+				769F48551DC6A91600554487 /* Views */,
+				769F48541DC6A90C00554487 /* Models */,
 				4D3296341DBA94FE0016BE5A /* View Models */,
 				76AAD2661D723F5600DBEA3D /* Controllers */,
 				76AAD2651D723F2D00DBEA3D /* Storyboards */,
@@ -164,6 +182,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		769F48541DC6A90C00554487 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				769F48621DC6B3C800554487 /* Post.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		769F48551DC6A91600554487 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		76AAD2621D723F1600DBEA3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				4D3296301DBA8CCE0016BE5A /* Constants.swift */,
+				769F48561DC6A92900554487 /* Style.swift */,
+				764C8F3A1DC6C65C006CA325 /* NavigationController.swift */,
+				764C8F3C1DC6CB51006CA325 /* Configuration.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -185,6 +221,10 @@
 		76AAD2641D723F2100DBEA3D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				769F485A1DC6B18600554487 /* Lato-Light.ttf */,
+				769F485B1DC6B18600554487 /* Lato-Bold.ttf */,
+				769F485C1DC6B18600554487 /* Lato-LightItalic.ttf */,
+				769F485D1DC6B18600554487 /* Lato-Regular.ttf */,
 				4D8A34611D70C21700BB6FA0 /* Assets.xcassets */,
 			);
 			name = Assets;
@@ -317,8 +357,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769F485E1DC6B18600554487 /* Lato-Light.ttf in Resources */,
+				769F48611DC6B18600554487 /* Lato-Regular.ttf in Resources */,
+				769F48601DC6B18600554487 /* Lato-LightItalic.ttf in Resources */,
 				4D8A34651D70C21700BB6FA0 /* LaunchScreen.storyboard in Resources */,
 				4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */,
+				769F485F1DC6B18600554487 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,8 +438,12 @@
 				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
 				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
+				769F48631DC6B3C800554487 /* Post.swift in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
+				764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */,
+				769F48571DC6A92900554487 /* Style.swift in Sources */,
+				764C8F3B1DC6C65C006CA325 /* NavigationController.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

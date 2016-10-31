@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum Posts: Int {
+    case Today = 0, Archive
+}
+
 class PostsViewController: UIViewController {
     
     var viewModel: PostsViewModel
@@ -28,13 +32,35 @@ class PostsViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.backgroundColor = .white
+        addSegControl()
+    }
+    
+    private func addSegControl() {
         let segControl = UISegmentedControl(items: ["Today", "Archive"])
+        segControl.backgroundColor = Style.blue
+        segControl.tintColor = Style.blue
+        segControl.addTarget(self, action: #selector(setView), for: .valueChanged)
         navigationItem.titleView = segControl
     }
     
     private func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = Style.grayLight
+    }
+    
+    @objc private func setView(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case Posts.Today.rawValue: setTodayView()
+        case Posts.Archive.rawValue: setArchiveView()
+        default: break
+        }
+    }
+    
+    private func setTodayView() {
+        print("recent view")
+    }
+    
+    private func setArchiveView() {
+        print("archive view")
     }
 
 }

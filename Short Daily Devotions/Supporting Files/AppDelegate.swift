@@ -15,12 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let nc = UINavigationController(rootViewController: PostsViewController(viewModel: PostsViewModel(postsURL: kAllPostsURL)))
-        window?.rootViewController = nc
-        window?.makeKeyAndVisible()
-        
+        Configuration.setupServices(launchOptions)
+        Configuration.run(&window)
         return true
     }
 
