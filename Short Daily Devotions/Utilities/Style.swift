@@ -11,12 +11,12 @@ import UIKit
 struct Style {
     
     // MARK: Colors
-    static var blue: UIColor { get { return UIColor(red: 33, green: 55, blue: 79, alpha: 1) } }
-    static var green: UIColor { get { return UIColor(red: 167, green: 167, blue: 69, alpha: 1) } }
-    static var grayLight: UIColor { get { return UIColor(red: 252, green: 252, blue: 252, alpha: 1) } }
-    static var gray: UIColor { get { return UIColor(red: 107, green: 107, blue: 107, alpha: 1) } }
-    static var white: UIColor { get { return UIColor(red: 255, green: 255, blue: 255, alpha: 1) } }
-    static var black: UIColor { get { return UIColor(red: 0, green: 0, blue: 0, alpha: 1) } }
+    static let blue = UIColor(red: 33, green: 55, blue: 79, alpha: 1)
+    static let green = UIColor(red: 167, green: 167, blue: 69, alpha: 1)
+    static let grayLight = UIColor(red: 252, green: 252, blue: 252, alpha: 1)
+    static let gray = UIColor(red: 107, green: 107, blue: 107, alpha: 1)
+    static var white = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    static var black = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     
     // MARK: Fonts
     
