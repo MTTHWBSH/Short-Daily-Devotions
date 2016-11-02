@@ -18,7 +18,7 @@
 		4D8A34651D70C21700BB6FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34631D70C21700BB6FA0 /* LaunchScreen.storyboard */; };
 		4D8A34701D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A346F1D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift */; };
 		4D8A347B1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A347A1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift */; };
-		764C8F3B1DC6C65C006CA325 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3A1DC6C65C006CA325 /* NavigationController.swift */; };
+		76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */; };
 		764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3C1DC6CB51006CA325 /* Configuration.swift */; };
 		769F48571DC6A92900554487 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48561DC6A92900554487 /* Style.swift */; };
 		769F485E1DC6B18600554487 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485A1DC6B18600554487 /* Lato-Light.ttf */; };
@@ -64,7 +64,7 @@
 		4D8A347C1D70C21700BB6FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.debug.xcconfig"; sourceTree = "<group>"; };
 		6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Short_Daily_Devotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		764C8F3A1DC6C65C006CA325 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Utilities/NavigationController.swift; sourceTree = "<group>"; };
+		76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		764C8F3C1DC6CB51006CA325 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Utilities/Configuration.swift; sourceTree = "<group>"; };
 		769F48561DC6A92900554487 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Utilities/Style.swift; sourceTree = "<group>"; };
 		769F485A1DC6B18600554487 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Assets/Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -212,7 +212,6 @@
 			children = (
 				4D3296301DBA8CCE0016BE5A /* Constants.swift */,
 				769F48561DC6A92900554487 /* Style.swift */,
-				764C8F3A1DC6C65C006CA325 /* NavigationController.swift */,
 				764C8F3C1DC6CB51006CA325 /* Configuration.swift */,
 			);
 			name = Utilities;
@@ -242,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4D3296321DBA94850016BE5A /* PostsViewController.swift */,
+				76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -442,8 +442,8 @@
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
 				764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */,
+				76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */,
 				769F48571DC6A92900554487 /* Style.swift in Sources */,
-				764C8F3B1DC6C65C006CA325 /* NavigationController.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

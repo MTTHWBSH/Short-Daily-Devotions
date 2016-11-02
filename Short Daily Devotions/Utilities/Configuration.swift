@@ -16,7 +16,8 @@ class Configuration {
 
     static func run(_ window: UIWindow?) {
         Style.themeUI()
-        let nc = NavigationController(rootViewController: PostsViewController(viewModel: PostsViewModel(postsURL: Constants.kAllPostsURL)))
+        let nc = UINavigationController(rootViewController: PostsViewController(viewModel: PostsViewModel(postsURL: Constants.kAllPostsURL)))
+        nc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }

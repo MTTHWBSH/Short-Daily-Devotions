@@ -27,24 +27,33 @@ class PostsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupView()
-    }
-    
-    private func setupNavigationBar() {
-        addSegControl()
-    }
-    
-    private func addSegControl() {
-        let segControl = UISegmentedControl(items: ["Today", "Archive"])
-        segControl.backgroundColor = Style.blue
-        segControl.tintColor = Style.blue
-        segControl.addTarget(self, action: #selector(setView), for: .valueChanged)
-        navigationItem.titleView = segControl
     }
     
     private func setupView() {
         view.backgroundColor = Style.grayLight
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        addSegControl()
+        addMoreInfoButton()
+    }
+    
+    private func addSegControl() {
+        let segControl = UISegmentedControl(items: ["Today", "Archive"])
+        segControl.selectedSegmentIndex = Posts.Today.rawValue
+        segControl.addTarget(self, action: #selector(setView), for: .valueChanged)
+        navigationItem.titleView = segControl
+    }
+    
+    private func addMoreInfoButton() {
+        let moreInfoButton = UIBarButtonItem(image: UIImage(named: "More"),
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(showMoreInfoView))
+        navigationItem.rightBarButtonItem = moreInfoButton
     }
     
     @objc private func setView(sender: UISegmentedControl) {
@@ -55,12 +64,17 @@ class PostsViewController: UIViewController {
         }
     }
     
+    @objc private func showMoreInfoView() {
+        let vc = MoreInfoViewController()
+        show(vc, sender: self)
+    }
+    
     private func setTodayView() {
-        print("recent view")
+
     }
     
     private func setArchiveView() {
-        print("archive view")
+
     }
 
 }
