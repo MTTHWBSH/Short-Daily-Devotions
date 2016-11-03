@@ -17,7 +17,12 @@ class PostsViewModel: ViewModel {
     
     private func loadPosts(postsURL: String) {
         Alamofire.request(postsURL).responseJSON { response in
-
+            guard let data = response.data,
+            let json = try? JSONSerialization.jsonObject(with: data, options: []),
+            let dict = json as? NSDictionary else { return }
+            
+            let posts = Post.from(dict)
+            print(posts)
         }
     }
     
