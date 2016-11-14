@@ -10,20 +10,32 @@ import Alamofire
 
 class PostsViewModel: ViewModel {
     
+    private var posts: [Post]? {
+        didSet {
+            render?()
+        }
+    }
+    
     init(postsURL: String) {
         super.init()
         self.loadPosts(postsURL: postsURL)
     }
     
     private func loadPosts(postsURL: String) {
-        Alamofire.request(postsURL).responseJSON { response in
+        Alamofire.request(postsURL).responseJSON { [weak self] response in
             guard let data = response.data,
             let json = try? JSONSerialization.jsonObject(with: data, options: []),
-            let dict = json as? NSDictionary else { return }
+            let posts = json as? NSArray else { return }
             
-            let posts = Post.from(dict)
-            print(posts)
+            guard let post = posts.firstObject as? NSDictionary else { return }
+            print(Post.from(post))
+            
+            self?.posts = Post.from(posts)
         }
+    }
+    
+    func latestPost() -> Post? {
+        return posts?.first
     }
     
 }
