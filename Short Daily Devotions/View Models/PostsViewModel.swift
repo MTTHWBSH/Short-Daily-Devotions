@@ -10,13 +10,14 @@ import Alamofire
 
 class PostsViewModel: ViewModel {
     
-    private var posts: [Post]? {
+    private var posts: [Post] {
         didSet {
             render?()
         }
     }
     
     init(postsURL: String) {
+        self.posts = []
         super.init()
         self.loadPosts(postsURL: postsURL)
     }
@@ -27,15 +28,16 @@ class PostsViewModel: ViewModel {
             let json = try? JSONSerialization.jsonObject(with: data, options: []),
             let posts = json as? NSArray else { return }
             
-            guard let post = posts.firstObject as? NSDictionary else { return }
-            print(Post.from(post))
-            
-            self?.posts = Post.from(posts)
+            posts.forEach { json in
+                guard let postDict = json as? NSDictionary,
+                let post = Post.from(postDict) else { return }
+                self?.posts.append(post)
+            }
         }
     }
     
     func latestPost() -> Post? {
-        return posts?.first
+        return posts.first ?? nil
     }
     
 }

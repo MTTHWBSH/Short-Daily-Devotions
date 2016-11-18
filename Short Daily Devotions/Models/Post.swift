@@ -10,7 +10,7 @@ import Mapper
 
 struct Post: Mappable {
     
-    let id: String
+    let id: Int
     let title: String?
     let date: Date?
     let author: String?
@@ -19,17 +19,21 @@ struct Post: Mappable {
     
     init(map: Mapper) throws {
         try id = map.from("id")
-        title = map.optionalFrom("title")
+        title = map.optionalFrom("title.rendered")
         date = map.optionalFrom("date", transformation: extractDate)
         author = map.optionalFrom("author")
-        excerpt = map.optionalFrom("excerpt")
-        content = map.optionalFrom("content")
+        excerpt = map.optionalFrom("excerpt.rendered")
+        content = map.optionalFrom("content.rendered")
     }
     
 }
 
-fileprivate func extractDate(object: Any?) throws -> Date {
-    guard let date = object as? Date else {
+fileprivate func extractDate(object: Any?) throws -> Date? {
+    guard let date = object as? String else {
         throw MapperError.convertibleError(value: object, type: String.self)
-    }; return date
+    }
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: date)
 }

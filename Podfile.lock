@@ -25,6 +25,11 @@ PODS:
   - Kanna (2.0.0)
   - ModelMapper (5.0.0)
   - PureLayout (3.0.2)
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -32,6 +37,7 @@ DEPENDENCIES:
   - Kanna
   - ModelMapper
   - PureLayout
+  - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -46,7 +52,9 @@ SPEC CHECKSUMS:
   Kanna: 9a6637f72f5c77fe9c045b1efb2a5bb074754af8
   ModelMapper: 89ced1f51ec6360e93f6889d08c818d4cad526a3
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
 
-PODFILE CHECKSUM: 2bd5a3420a9084c00155a94eef0f4afc05b5c45a
+PODFILE CHECKSUM: 6fb090919674352a946368bdd9c2ec1e49f7e211
 
 COCOAPODS: 1.1.1
