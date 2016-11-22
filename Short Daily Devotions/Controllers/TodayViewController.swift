@@ -10,13 +10,23 @@ import UIKit
 import PureLayout
 
 class TodayViewController: UIViewController {
-
+    
+    var post: Post? {
+        didSet {
+            setupView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let label = UILabel()
         label.text = "Today"
         view.addSubview(label)
         label.autoCenterInSuperview()
+    }
+    
+    private func setupView() {
+        
     }
     
 }

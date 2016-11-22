@@ -96,6 +96,7 @@ class PostsViewController: UIPageViewController {
     func setVC(index: Int, animated: Bool) {
         switch index {
         case Posts.Today.rawValue:
+            todayVC.post = viewModel.latestPost()
             setViewControllers([todayVC], direction: .reverse, animated: animated, completion: nil)
         case Posts.Archive.rawValue:
             setViewControllers([archiveVC], direction: .forward, animated: animated, completion: nil)
