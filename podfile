@@ -5,7 +5,6 @@ use_frameworks!
 def all_pods
     pod 'Alamofire'
     pod 'ModelMapper'
-    pod 'RealmSwift'
     pod 'Kanna'
     pod 'PureLayout'
     pod 'Google/Analytics'

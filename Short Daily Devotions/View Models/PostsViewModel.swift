@@ -10,11 +10,7 @@ import Alamofire
 
 class PostsViewModel: ViewModel {
     
-    private var posts: [Post] {
-        didSet {
-            render?()
-        }
-    }
+    private var posts: [Post]
     
     init(postsURL: String) {
         self.posts = []
@@ -31,8 +27,10 @@ class PostsViewModel: ViewModel {
             posts.forEach { json in
                 guard let postDict = json as? NSDictionary,
                 let post = Post.from(postDict) else { return }
+                post.formattedContent()
                 self?.posts.append(post)
             }
+            self?.render?()
         }
     }
     
