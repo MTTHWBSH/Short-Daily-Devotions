@@ -16,13 +16,13 @@ enum Posts: Int {
 class PostsViewController: UIPageViewController {
     
     var viewModel: PostsViewModel
-    var todayVC: TodayViewController
+    var postVC: PostViewController
     var archiveVC: ArchiveViewController
     var activityIndicator: UIActivityIndicatorView?
     
     init(viewModel: PostsViewModel) {
         self.viewModel = viewModel
-        self.todayVC = TodayViewController()
+        self.postVC = PostViewController()
         self.archiveVC = ArchiveViewController()
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [:])
         self.viewModel.render = { [weak self] in self?.render() }
@@ -96,8 +96,9 @@ class PostsViewController: UIPageViewController {
     func setVC(index: Int, animated: Bool) {
         switch index {
         case Posts.Today.rawValue:
-            todayVC.post = viewModel.latestPost()
-            setViewControllers([todayVC], direction: .reverse, animated: animated, completion: nil)
+            guard let post = viewModel.latestPost() else { return }
+            postVC.viewModel = viewModel.postViewModel(forPost: post)
+            setViewControllers([postVC], direction: .reverse, animated: animated, completion: nil)
         case Posts.Archive.rawValue:
             setViewControllers([archiveVC], direction: .forward, animated: animated, completion: nil)
         default: break
@@ -108,10 +109,10 @@ class PostsViewController: UIPageViewController {
 
 extension PostsViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController == archiveVC { return todayVC } else { return nil }
+        if viewController == archiveVC { return postVC } else { return nil }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController == todayVC { return archiveVC } else { return nil }
+        if viewController == postVC { return archiveVC } else { return nil }
     }
 }

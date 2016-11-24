@@ -12,7 +12,7 @@
 		4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296321DBA94850016BE5A /* PostsViewController.swift */; };
 		4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296351DBA95130016BE5A /* PostsViewModel.swift */; };
 		4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296371DBA95430016BE5A /* ViewModel.swift */; };
-		4D32A6401DE4E03E00535EA3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A63F1DE4E03E00535EA3 /* TodayViewController.swift */; };
+		4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */; };
 		4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
@@ -21,6 +21,7 @@
 		4D8A34701D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A346F1D70C21700BB6FA0 /* Short_Daily_DevotionsTests.swift */; };
 		4D8A347B1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A347A1D70C21700BB6FA0 /* Short_Daily_DevotionsUITests.swift */; };
 		76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */; };
+		762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762A26A41DE6742D00AD75BA /* PostViewModel.swift */; };
 		764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3C1DC6CB51006CA325 /* Configuration.swift */; };
 		769F48571DC6A92900554487 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48561DC6A92900554487 /* Style.swift */; };
 		769F485E1DC6B18600554487 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485A1DC6B18600554487 /* Lato-Light.ttf */; };
@@ -52,7 +53,7 @@
 		4D3296321DBA94850016BE5A /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewController.swift; path = Controllers/PostsViewController.swift; sourceTree = "<group>"; };
 		4D3296351DBA95130016BE5A /* PostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsViewModel.swift; path = "View Models/PostsViewModel.swift"; sourceTree = "<group>"; };
 		4D3296371DBA95430016BE5A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "View Models/ViewModel.swift"; sourceTree = "<group>"; };
-		4D32A63F1DE4E03E00535EA3 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayViewController.swift; path = Controllers/TodayViewController.swift; sourceTree = "<group>"; };
+		4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = Controllers/PostViewController.swift; sourceTree = "<group>"; };
 		4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArchiveViewController.swift; path = Controllers/ArchiveViewController.swift; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		580231C1ABBEA71456885DBA /* Pods-Short Daily Devotions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.debug.xcconfig"; sourceTree = "<group>"; };
 		6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Short_Daily_Devotions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreInfoViewController.swift; path = Controllers/MoreInfoViewController.swift; sourceTree = "<group>"; };
+		762A26A41DE6742D00AD75BA /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewModel.swift; path = "View Models/PostViewModel.swift"; sourceTree = "<group>"; };
 		764C8F3C1DC6CB51006CA325 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Utilities/Configuration.swift; sourceTree = "<group>"; };
 		769F48561DC6A92900554487 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Utilities/Style.swift; sourceTree = "<group>"; };
 		769F485A1DC6B18600554487 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Assets/Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				4D3296351DBA95130016BE5A /* PostsViewModel.swift */,
 				4D3296371DBA95430016BE5A /* ViewModel.swift */,
+				762A26A41DE6742D00AD75BA /* PostViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 			children = (
 				4D3296321DBA94850016BE5A /* PostsViewController.swift */,
 				76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */,
-				4D32A63F1DE4E03E00535EA3 /* TodayViewController.swift */,
+				4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */,
 				4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */,
 			);
 			name = Controllers;
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */,
 				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
 				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
@@ -452,7 +456,7 @@
 				76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */,
 				769F48571DC6A92900554487 /* Style.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
-				4D32A6401DE4E03E00535EA3 /* TodayViewController.swift in Sources */,
+				4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

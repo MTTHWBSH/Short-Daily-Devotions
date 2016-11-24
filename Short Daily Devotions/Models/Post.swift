@@ -27,6 +27,7 @@ struct Post: Mappable {
     
     func formattedContent() -> String {
         let html = HTML(html: content, encoding: .utf8)
+        print(html)
         return "\(html?.content)"
     }
     

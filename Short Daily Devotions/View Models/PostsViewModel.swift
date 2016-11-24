@@ -37,4 +37,8 @@ class PostsViewModel: ViewModel {
         return posts.first ?? nil
     }
     
+    func postViewModel(forPost post: Post) -> PostViewModel {
+        return PostViewModel(post: post)
+    }
+    
 }
