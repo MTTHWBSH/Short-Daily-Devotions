@@ -16,6 +16,7 @@ struct Post: Mappable {
     let content: String
     let date: Date?
     let excerpt: String?
+    let doc: HTMLDocument?
     
     init(map: Mapper) throws {
         try id = map.from("id")
@@ -23,12 +24,16 @@ struct Post: Mappable {
         try content = map.from("content.rendered")
         date = map.optionalFrom("date", transformation: extractDate)
         excerpt = map.optionalFrom("excerpt.rendered")
+        doc = HTML(html: content, encoding: .utf8)
+    }
+    
+    func formattedBlockQuote() -> String {
+        return "\(doc?.xpath("//blockquote"))"
     }
     
     func formattedContent() -> String {
-        let html = HTML(html: content, encoding: .utf8)
-        print(html)
-        return "\(html?.content)"
+        doc.
+        return "\(doc?.content)"
     }
     
 }
