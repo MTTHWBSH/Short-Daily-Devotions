@@ -10,7 +10,7 @@ import UIKit
 import PureLayout
 
 enum Posts: Int {
-    case Today, Archive
+    case today, archive
 }
 
 class PostsViewController: UIPageViewController {
@@ -39,7 +39,7 @@ class PostsViewController: UIPageViewController {
     
     private func render() {
         removeActivityIndicator()
-        setVC(index:Posts.Today.rawValue, animated: false)
+        setVC(index:Posts.today.rawValue, animated: false)
     }
     
     private func setupView() {
@@ -56,7 +56,7 @@ class PostsViewController: UIPageViewController {
     
     private func addSegControl() {
         let segControl = UISegmentedControl(items: ["Today", "Archive"])
-        segControl.selectedSegmentIndex = Posts.Today.rawValue
+        segControl.selectedSegmentIndex = Posts.today.rawValue
         segControl.addTarget(self, action: #selector(setView), for: .valueChanged)
         navigationItem.titleView = segControl
     }
@@ -95,12 +95,12 @@ class PostsViewController: UIPageViewController {
     
     func setVC(index: Int, animated: Bool) {
         switch index {
-        case Posts.Today.rawValue:
+        case Posts.today.rawValue:
             guard let post = viewModel.latestPost() else { return }
             let _ = post.formattedContent()
             postVC.viewModel = viewModel.postViewModel(forPost: post)
             setViewControllers([postVC], direction: .reverse, animated: animated, completion: nil)
-        case Posts.Archive.rawValue:
+        case Posts.archive.rawValue:
             setViewControllers([archiveVC], direction: .forward, animated: animated, completion: nil)
         default: break
         }

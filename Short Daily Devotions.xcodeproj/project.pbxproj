@@ -23,6 +23,8 @@
 		76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */; };
 		762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762A26A41DE6742D00AD75BA /* PostViewModel.swift */; };
 		764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C8F3C1DC6CB51006CA325 /* Configuration.swift */; };
+		765C76151DE8EAF400E21B3F /* PostDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765C76141DE8EAF400E21B3F /* PostDetailsCell.swift */; };
+		765C76171DE8EB1600E21B3F /* PostContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765C76161DE8EB1600E21B3F /* PostContentCell.swift */; };
 		769F48571DC6A92900554487 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48561DC6A92900554487 /* Style.swift */; };
 		769F485E1DC6B18600554487 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485A1DC6B18600554487 /* Lato-Light.ttf */; };
 		769F485F1DC6B18600554487 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485B1DC6B18600554487 /* Lato-Bold.ttf */; };
@@ -72,6 +74,8 @@
 		76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreInfoViewController.swift; path = Controllers/MoreInfoViewController.swift; sourceTree = "<group>"; };
 		762A26A41DE6742D00AD75BA /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewModel.swift; path = "View Models/PostViewModel.swift"; sourceTree = "<group>"; };
 		764C8F3C1DC6CB51006CA325 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Utilities/Configuration.swift; sourceTree = "<group>"; };
+		765C76141DE8EAF400E21B3F /* PostDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailsCell.swift; path = Views/Cells/Post/PostDetailsCell.swift; sourceTree = "<group>"; };
+		765C76161DE8EB1600E21B3F /* PostContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostContentCell.swift; path = Views/Cells/Post/PostContentCell.swift; sourceTree = "<group>"; };
 		769F48561DC6A92900554487 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Utilities/Style.swift; sourceTree = "<group>"; };
 		769F485A1DC6B18600554487 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Assets/Lato-Light.ttf"; sourceTree = "<group>"; };
 		769F485B1DC6B18600554487 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Assets/Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -189,6 +193,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		765C76121DE8EA9C00E21B3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				765C76131DE8EAB900E21B3F /* Post */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		765C76131DE8EAB900E21B3F /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				765C76141DE8EAF400E21B3F /* PostDetailsCell.swift */,
+				765C76161DE8EB1600E21B3F /* PostContentCell.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
 		769F48541DC6A90C00554487 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +221,7 @@
 		769F48551DC6A91600554487 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				765C76121DE8EA9C00E21B3F /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -447,11 +469,13 @@
 				762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */,
 				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
 				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
+				765C76171DE8EB1600E21B3F /* PostContentCell.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				769F48631DC6B3C800554487 /* Post.swift in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
 				764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */,
+				765C76151DE8EAF400E21B3F /* PostDetailsCell.swift in Sources */,
 				4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */,
 				76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */,
 				769F48571DC6A92900554487 /* Style.swift in Sources */,

@@ -28,12 +28,14 @@ struct Post: Mappable {
     }
     
     func formattedBlockQuote() -> String {
-        return "\(doc?.xpath("//blockquote"))"
+        return "\(doc?.xpath("//blockquote").first)"
     }
     
     func formattedContent() -> String {
-        doc.
-        return "\(doc?.content)"
+        let formattedDoc = doc
+        if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
+        if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
+        return "\(formattedDoc?.body?.text)"
     }
     
 }
