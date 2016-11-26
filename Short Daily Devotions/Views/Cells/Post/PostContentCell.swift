@@ -11,13 +11,19 @@ import PureLayout
 
 class PostContentCell: UITableViewCell {
     
+    static let kReuseIdentifier = "PostContentCell"
+    
     var verse: String
     var content: String
 
     init(content: String, verse: String) {
-        self.verse = String
+        self.verse = verse
         self.content = content
-        super.init()
+        super.init(style: .default, reuseIdentifier: PostContentCell.kReuseIdentifier)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func awakeFromNib() {

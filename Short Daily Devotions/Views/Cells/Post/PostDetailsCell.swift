@@ -11,13 +11,22 @@ import PureLayout
 
 class PostDetailsCell: UITableViewCell {
     
-    var title: String
-    var date: String
+    static let kReuseIdentifier = "PostDeatilsCell"
     
-    init(title: String, date: String) {
+    var title: String
+    var date: String?
+    
+    let titleLabel = UILabel()
+    let dateLabel = UILabel()
+    
+    init(title: String, date: String?) {
         self.title = title
         self.date = date
-        super.init()
+        super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func awakeFromNib() {
@@ -27,11 +36,19 @@ class PostDetailsCell: UITableViewCell {
     }
     
     private func setupTitle() {
-        
+        titleLabel.text = title
+        titleLabel.numberOfLines = 0
+        addSubview(titleLabel)
+        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(8, 8, 8, 8), excludingEdge: .bottom)
     }
     
     private func setupDate() {
-        
+        dateLabel.text = date
+        dateLabel.numberOfLines = 0
+        addSubview(dateLabel)
+        dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 0)
+        dateLabel.autoPinEdge(.leading, to: .leading, of: titleLabel, withOffset: 0)
+        dateLabel.autoPinEdge(.trailing, to: .trailing, of: titleLabel, withOffset: 0)
     }
 
 }

@@ -24,14 +24,20 @@ class PostViewController: UITableViewController {
     }
     
     private func setupTableView() {
+        registerCells()
         tableView.separatorStyle = .none
+    }
+    
+    private func registerCells() {
+        tableView.register(PostDetailsCell.self, forCellReuseIdentifier: PostDetailsCell.kReuseIdentifier)
+        tableView.register(PostContentCell.self, forCellReuseIdentifier: PostContentCell.kReuseIdentifier)
     }
     
 }
 
 extension PostViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return viewModel?.cell(forPostSection: indexPath) ?? UITableViewCell()
+        return viewModel?.cell(forIndexPath: indexPath) ?? UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,6 +45,6 @@ extension PostViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 
+        return 200
     }
 }
