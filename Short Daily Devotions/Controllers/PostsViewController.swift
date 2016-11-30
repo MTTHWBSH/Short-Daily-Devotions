@@ -97,7 +97,6 @@ class PostsViewController: UIPageViewController {
         switch index {
         case Posts.today.rawValue:
             guard let post = viewModel.latestPost() else { return }
-            let _ = post.formattedContent()
             postVC.viewModel = viewModel.postViewModel(forPost: post)
             setViewControllers([postVC], direction: .reverse, animated: animated, completion: nil)
         case Posts.archive.rawValue:

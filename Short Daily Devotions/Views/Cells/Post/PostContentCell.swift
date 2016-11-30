@@ -23,16 +23,12 @@ class PostContentCell: UITableViewCell {
         self.verse = verse
         self.content = content
         super.init(style: .default, reuseIdentifier: PostContentCell.kReuseIdentifier)
+        self.setupVerse()
+        self.setupContent()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupVerse()
-        setupContent()
     }
     
     private func setupVerse() {

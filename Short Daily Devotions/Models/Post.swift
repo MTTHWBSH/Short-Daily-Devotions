@@ -27,18 +27,6 @@ struct Post: Mappable {
         doc = HTML(html: content, encoding: .utf8)
     }
     
-    func formattedBlockQuote() -> String {
-        doc?.xpath("//blockquote").forEach { bq in print(bq) }
-        return "\(doc?.xpath("//blockquote").first)"
-    }
-    
-    func formattedContent() -> String {
-        let formattedDoc = doc
-        if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
-        if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
-        return "\(formattedDoc?.body?.text)"
-    }
-    
 }
 
 fileprivate var formatter: DateFormatter = {

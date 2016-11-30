@@ -33,6 +33,8 @@ class PostViewModel: ViewModel {
         return formattedDate(forDate: date)
     }
     
+    // MARK: Post Formatting
+    
     private func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
     
     private func formattedTitle(forTitle title: String) -> NSAttributedString {
@@ -43,15 +45,27 @@ class PostViewModel: ViewModel {
         return attrTitle
     }
     
+    private func formattedBlockQuote() -> String {
+        return "\(post.doc?.xpath("//blockquote").first)"
+    }
+    
+    private func formattedContent() -> String {
+        let formattedDoc = post.doc
+        if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
+        if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
+        return "\(formattedDoc?.body?.text)"
+    }
+    
+    // MARK: TableView DataSource
+    
     func postSections() -> Int { return PostSections.count.rawValue }
     
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case PostSections.details.rawValue: return PostDetailsCell(title: formattedTitle(forTitle: post.title), date: dateString)
-        case PostSections.body.rawValue:    return PostContentCell(verse: post.formattedBlockQuote(), content: post.formattedContent())
+        case PostSections.body.rawValue:    return PostContentCell(verse: formattedBlockQuote(), content: formattedContent())
         default: return UITableViewCell()
         }
     }
     
 }
-
