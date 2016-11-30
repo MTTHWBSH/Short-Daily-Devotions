@@ -13,13 +13,13 @@ class PostDetailsCell: UITableViewCell {
     
     static let kReuseIdentifier = "PostDeatilsCell"
     
-    var title: String
+    var title: NSAttributedString
     var date: String?
     
     let titleLabel = UILabel()
     let dateLabel = UILabel()
     
-    init(title: String, date: String?) {
+    init(title: NSAttributedString, date: String?) {
         self.title = title
         self.date = date
         super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
@@ -32,7 +32,7 @@ class PostDetailsCell: UITableViewCell {
     }
     
     private func setupTitle() {
-        titleLabel.text = title
+        titleLabel.attributedText = title
         titleLabel.numberOfLines = 0
         addSubview(titleLabel)
         titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(8, 8, 8, 8), excludingEdge: .bottom)

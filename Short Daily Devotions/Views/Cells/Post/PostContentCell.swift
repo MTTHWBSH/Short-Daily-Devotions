@@ -15,8 +15,11 @@ class PostContentCell: UITableViewCell {
     
     var verse: String
     var content: String
+    
+    let verseLabel = UILabel()
+    let contentLabel = UILabel()
 
-    init(content: String, verse: String) {
+    init(verse: String, content: String) {
         self.verse = verse
         self.content = content
         super.init(style: .default, reuseIdentifier: PostContentCell.kReuseIdentifier)
@@ -33,15 +36,19 @@ class PostContentCell: UITableViewCell {
     }
     
     private func setupVerse() {
-        
+        verseLabel.text = verse
+        verseLabel.numberOfLines = 0
+        addSubview(verseLabel)
+        verseLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(8, 8, 8, 8), excludingEdge: .bottom)
     }
     
     private func setupContent() {
-        
-    }
-    
-    func cellHeight() -> CGFloat {
-        return 50.0
+        contentLabel.text = content
+        contentLabel.numberOfLines = 0
+        addSubview(contentLabel)
+        contentLabel.autoPinEdge(.top, to: .bottom, of: verseLabel, withOffset: 0)
+        contentLabel.autoPinEdge(.leading, to: .leading, of: verseLabel, withOffset: 0)
+        contentLabel.autoPinEdge(.trailing, to: .trailing, of: verseLabel, withOffset: 0)
     }
     
 }

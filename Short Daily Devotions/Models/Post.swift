@@ -28,6 +28,7 @@ struct Post: Mappable {
     }
     
     func formattedBlockQuote() -> String {
+        doc?.xpath("//blockquote").forEach { bq in print(bq) }
         return "\(doc?.xpath("//blockquote").first)"
     }
     

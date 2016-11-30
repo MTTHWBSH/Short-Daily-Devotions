@@ -26,6 +26,7 @@ class PostViewController: UITableViewController {
     private func setupTableView() {
         registerCells()
         tableView.separatorStyle = .none
+        tableView.backgroundColor = Style.grayLight
     }
     
     private func registerCells() {
