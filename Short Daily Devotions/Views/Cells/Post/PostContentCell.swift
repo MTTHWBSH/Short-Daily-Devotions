@@ -23,12 +23,17 @@ class PostContentCell: UITableViewCell {
         self.verse = verse
         self.content = content
         super.init(style: .default, reuseIdentifier: PostContentCell.kReuseIdentifier)
+        self.styleView()
         self.setupVerse()
         self.setupContent()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func styleView() {
+        backgroundColor = Style.grayLight
     }
     
     private func setupVerse() {
@@ -41,10 +46,12 @@ class PostContentCell: UITableViewCell {
     private func setupContent() {
         contentLabel.text = content
         contentLabel.numberOfLines = 0
+        contentLabel.lineBreakMode = .byWordWrapping
         addSubview(contentLabel)
         contentLabel.autoPinEdge(.top, to: .bottom, of: verseLabel, withOffset: 0)
         contentLabel.autoPinEdge(.leading, to: .leading, of: verseLabel, withOffset: 0)
         contentLabel.autoPinEdge(.trailing, to: .trailing, of: verseLabel, withOffset: 0)
+        contentLabel.autoPinEdge(toSuperviewEdge: .bottom)
     }
     
 }

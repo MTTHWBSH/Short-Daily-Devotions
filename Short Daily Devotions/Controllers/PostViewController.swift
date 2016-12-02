@@ -27,6 +27,9 @@ class PostViewController: UITableViewController {
         registerCells()
         tableView.separatorStyle = .none
         tableView.backgroundColor = Style.grayLight
+        tableView.estimatedRowHeight = tableView.frame.height
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     private func registerCells() {
@@ -43,9 +46,5 @@ extension PostViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.postSections() ?? 0
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
     }
 }

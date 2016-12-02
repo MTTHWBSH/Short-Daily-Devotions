@@ -23,12 +23,17 @@ class PostDetailsCell: UITableViewCell {
         self.title = title
         self.date = date
         super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
+        self.styleView()
         self.setupTitle()
         self.setupDate()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func styleView() {
+        backgroundColor = Style.grayLight
     }
     
     private func setupTitle() {

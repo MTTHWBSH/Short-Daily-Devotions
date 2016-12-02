@@ -45,15 +45,16 @@ class PostViewModel: ViewModel {
         return attrTitle
     }
     
-    private func formattedBlockQuote() -> String {
-        return "\(post.doc?.xpath("//blockquote").first)"
+    private func formattedBlockQuote() -> String? {
+        return post.doc?.xpath("//blockquote").first?.content
     }
     
-    private func formattedContent() -> String {
+    private func formattedContent() -> String? {
         let formattedDoc = post.doc
         if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
         if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
-        return "\(formattedDoc?.body?.text)"
+        guard let formattedContent = formattedDoc?.body?.content else { return nil }
+        return formattedContent
     }
     
     // MARK: TableView DataSource
@@ -63,7 +64,7 @@ class PostViewModel: ViewModel {
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case PostSections.details.rawValue: return PostDetailsCell(title: formattedTitle(forTitle: post.title), date: dateString)
-        case PostSections.body.rawValue:    return PostContentCell(verse: formattedBlockQuote(), content: formattedContent())
+        case PostSections.body.rawValue:    return PostContentCell(verse: formattedBlockQuote() ?? "", content: formattedContent() ?? "")
         default: return UITableViewCell()
         }
     }
