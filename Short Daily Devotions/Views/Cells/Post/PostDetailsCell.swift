@@ -13,13 +13,13 @@ class PostDetailsCell: UITableViewCell {
     
     static let kReuseIdentifier = "PostDeatilsCell"
     
-    var title: NSAttributedString
+    var title: NSMutableAttributedString
     var date: String?
     
     let titleLabel = UILabel()
     let dateLabel = UILabel()
     
-    init(title: NSAttributedString, date: String?) {
+    init(title: NSMutableAttributedString, date: String?) {
         self.title = title
         self.date = date
         super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
@@ -37,6 +37,10 @@ class PostDetailsCell: UITableViewCell {
     }
     
     private func setupTitle() {
+        let attrs: [String: Any] = [
+            NSFontAttributeName: Style.boldFont(withSize: 20)
+        ]
+        title.addAttributes(attrs, range: NSMakeRange(0, title.length))
         titleLabel.attributedText = title
         titleLabel.numberOfLines = 0
         addSubview(titleLabel)
@@ -45,6 +49,7 @@ class PostDetailsCell: UITableViewCell {
     
     private func setupDate() {
         dateLabel.text = date
+        dateLabel.font = Style.lightFont(withSize: 14)
         dateLabel.numberOfLines = 0
         addSubview(dateLabel)
         dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 0)
