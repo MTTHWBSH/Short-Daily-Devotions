@@ -34,6 +34,7 @@ class PostDetailsCell: UITableViewCell {
     
     private func styleView() {
         backgroundColor = Style.grayLight
+        selectionStyle = .none
     }
     
     private func setupTitle() {

@@ -34,6 +34,7 @@ class PostContentCell: UITableViewCell {
     
     private func styleView() {
         backgroundColor = Style.grayLight
+        selectionStyle = .none
     }
     
     private func setupVerse() {
@@ -42,7 +43,20 @@ class PostContentCell: UITableViewCell {
         verseLabel.font = Style.lightItalic(withSize: 18)
         verseLabel.textColor = Style.gray
         addSubview(verseLabel)
-        verseLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(8, 8, 8, 8), excludingEdge: .bottom)
+        verseLabel.autoPinEdge(.top, to: .top, of: self, withOffset: 30)
+        verseLabel.autoPinEdge(.trailing, to: .trailing, of: self, withOffset: -8)
+        verseLabel.autoPinEdge(.leading, to: .leading, of: self, withOffset: 16)
+        addLeftBorder(toView: verseLabel)
+    }
+    
+    private func addLeftBorder(toView view: UIView) {
+        let border = UIView()
+        border.backgroundColor = Style.gray
+        addSubview(border)
+        border.autoSetDimension(.width, toSize: 2)
+        border.autoPinEdge(.top, to: .top, of: view)
+        border.autoPinEdge(.bottom, to: .bottom, of: view)
+        border.autoPinEdge(.trailing, to: .leading, of: view, withOffset: -4)
     }
     
     private func setupContent() {

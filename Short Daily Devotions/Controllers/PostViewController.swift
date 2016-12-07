@@ -26,6 +26,7 @@ class PostViewController: UITableViewController {
     private func setupTableView() {
         registerCells()
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.backgroundColor = Style.grayLight
         tableView.estimatedRowHeight = tableView.frame.height
         tableView.rowHeight = UITableViewAutomaticDimension
