@@ -45,7 +45,7 @@ class PostDetailsCell: UITableViewCell {
         titleLabel.attributedText = title
         titleLabel.numberOfLines = 0
         addSubview(titleLabel)
-        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(8, 8, 8, 8), excludingEdge: .bottom)
+        titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(20, 8, 0, 8), excludingEdge: .bottom)
     }
     
     private func setupDate() {
@@ -56,6 +56,7 @@ class PostDetailsCell: UITableViewCell {
         dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 0)
         dateLabel.autoPinEdge(.leading, to: .leading, of: titleLabel, withOffset: 0)
         dateLabel.autoPinEdge(.trailing, to: .trailing, of: titleLabel, withOffset: 0)
+        dateLabel.autoPinEdge(toSuperviewEdge: .bottom)
     }
 
 }

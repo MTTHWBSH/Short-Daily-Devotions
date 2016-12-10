@@ -18,6 +18,7 @@ class PostContentCell: UITableViewCell {
     
     let verseLabel = UILabel()
     let contentLabel = UILabel()
+    let border = UIView()
 
     init(verse: String, content: String) {
         self.verse = verse
@@ -50,34 +51,59 @@ class PostContentCell: UITableViewCell {
     }
     
     private func addLeftBorder(toView view: UIView) {
-        let border = UIView()
         border.backgroundColor = Style.gray
         addSubview(border)
         border.autoSetDimension(.width, toSize: 2)
         border.autoPinEdge(.top, to: .top, of: view)
         border.autoPinEdge(.bottom, to: .bottom, of: view)
-        border.autoPinEdge(.trailing, to: .leading, of: view, withOffset: -4)
+        border.autoPinEdge(.trailing, to: .leading, of: view, withOffset: -6)
     }
     
     private func setupContent() {
+        let attrString = NSMutableAttributedString(string: content)
+        
         contentLabel.numberOfLines = 0
         contentLabel.lineBreakMode = .byWordWrapping
         let pgStyle = NSMutableParagraphStyle()
         pgStyle.lineSpacing = 5
+        
         let attrs: [String: Any] = [
             NSParagraphStyleAttributeName: pgStyle,
             NSFontAttributeName: Style.lightFont(withSize: 16)
         ]
-        contentLabel.attributedText = NSAttributedString(string: content, attributes: attrs)
+        attrString.addAttributes(attrs, range: NSMakeRange(0, content.characters.count))
+        pgStyle.lineSpacing = 50
+        attrString.attributes(forPattern: "\n",
+                              in: content,
+                              withAttributes: [NSParagraphStyleAttributeName: pgStyle])
+        contentLabel.attributedText = attrString
         addSubview(contentLabel)
-        layoutContet()
+        layoutContent()
     }
     
-    private func layoutContet() {
+    private func layoutContent() {
         contentLabel.autoPinEdge(.top, to: .bottom, of: verseLabel, withOffset: 0)
-        contentLabel.autoPinEdge(.leading, to: .leading, of: verseLabel, withOffset: 0)
+        contentLabel.autoPinEdge(.leading, to: .leading, of: self, withOffset: 8)
         contentLabel.autoPinEdge(.trailing, to: .trailing, of: verseLabel, withOffset: 0)
         contentLabel.autoPinEdge(toSuperviewEdge: .bottom)
     }
     
+}
+
+fileprivate extension NSMutableAttributedString {
+    func attributes(forPattern regex: String,in text: String,withAttributes attributes: [String: Any]) {
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            regex.enumerateMatches(in: text,
+                                   options: [],
+                                   range: NSMakeRange(0,text.characters.count),
+                                   using: { match, _, _ in
+                                    
+                guard let subRange = match?.rangeAt(1) else { return }
+                attributes.forEach({ key, value in
+                    self.addAttribute(key, value: value, range: subRange)
+                })
+            })
+        } catch let error { print("invalid regex: \(error.localizedDescription)") }
+    }
 }
