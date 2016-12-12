@@ -65,17 +65,18 @@ class PostContentCell: UITableViewCell {
         contentLabel.numberOfLines = 0
         contentLabel.lineBreakMode = .byWordWrapping
         let pgStyle = NSMutableParagraphStyle()
-        pgStyle.lineSpacing = 5
+        let newLinePGStyle = NSMutableParagraphStyle()
+        pgStyle.lineSpacing = 3
+        newLinePGStyle.lineSpacing = 30
         
         let attrs: [String: Any] = [
             NSParagraphStyleAttributeName: pgStyle,
             NSFontAttributeName: Style.lightFont(withSize: 16)
         ]
         attrString.addAttributes(attrs, range: NSMakeRange(0, content.characters.count))
-        pgStyle.lineSpacing = 50
-        attrString.attributes(forPattern: "\n",
+        attrString.addAttributes(forPattern: "\n",
                               in: content,
-                              withAttributes: [NSParagraphStyleAttributeName: pgStyle])
+                              withAttributes: [NSParagraphStyleAttributeName: newLinePGStyle])
         contentLabel.attributedText = attrString
         addSubview(contentLabel)
         layoutContent()
@@ -91,7 +92,7 @@ class PostContentCell: UITableViewCell {
 }
 
 fileprivate extension NSMutableAttributedString {
-    func attributes(forPattern regex: String,in text: String,withAttributes attributes: [String: Any]) {
+    func addAttributes(forPattern regex: String,in text: String,withAttributes attributes: [String: Any]) {
         do {
             let regex = try NSRegularExpression(pattern: regex)
             regex.enumerateMatches(in: text,
@@ -99,7 +100,7 @@ fileprivate extension NSMutableAttributedString {
                                    range: NSMakeRange(0,text.characters.count),
                                    using: { match, _, _ in
                                     
-                guard let subRange = match?.rangeAt(1) else { return }
+                guard let subRange = match?.rangeAt(0) else { return }
                 attributes.forEach({ key, value in
                     self.addAttribute(key, value: value, range: subRange)
                 })
