@@ -13,13 +13,13 @@ class PostDetailsCell: UITableViewCell {
     
     static let kReuseIdentifier = "PostDeatilsCell"
     
-    var title: NSMutableAttributedString
+    var title: String
     var date: String?
     
     let titleLabel = UILabel()
     let dateLabel = UILabel()
     
-    init(title: NSMutableAttributedString, date: String?) {
+    init(title: String, date: String?) {
         self.title = title
         self.date = date
         super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
@@ -38,11 +38,9 @@ class PostDetailsCell: UITableViewCell {
     }
     
     private func setupTitle() {
-        let attrs: [String: Any] = [
-            NSFontAttributeName: Style.boldFont(withSize: 20)
-        ]
-        title.addAttributes(attrs, range: NSMakeRange(0, title.length))
-        titleLabel.attributedText = title
+        titleLabel.text = title.uppercased()
+        titleLabel.textColor = Style.blue
+        titleLabel.font = Style.boldFont(withSize: 20)
         titleLabel.numberOfLines = 0
         addSubview(titleLabel)
         titleLabel.autoPinEdgesToSuperviewEdges(with: UIEdgeInsetsMake(20, 8, 0, 8), excludingEdge: .bottom)
@@ -50,10 +48,10 @@ class PostDetailsCell: UITableViewCell {
     
     private func setupDate() {
         dateLabel.text = date
-        dateLabel.font = Style.lightFont(withSize: 14)
+        dateLabel.font = Style.lightFont(withSize: 16)
         dateLabel.numberOfLines = 0
         addSubview(dateLabel)
-        dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 0)
+        dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 5)
         dateLabel.autoPinEdge(.leading, to: .leading, of: titleLabel, withOffset: 0)
         dateLabel.autoPinEdge(.trailing, to: .trailing, of: titleLabel, withOffset: 0)
         dateLabel.autoPinEdge(toSuperviewEdge: .bottom)

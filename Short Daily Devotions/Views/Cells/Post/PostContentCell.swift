@@ -51,32 +51,27 @@ class PostContentCell: UITableViewCell {
     }
     
     private func addLeftBorder(toView view: UIView) {
-        border.backgroundColor = Style.gray
+        border.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
         addSubview(border)
-        border.autoSetDimension(.width, toSize: 2)
+        border.autoSetDimension(.width, toSize: 3)
         border.autoPinEdge(.top, to: .top, of: view)
         border.autoPinEdge(.bottom, to: .bottom, of: view)
-        border.autoPinEdge(.trailing, to: .leading, of: view, withOffset: -6)
+        border.autoPinEdge(.trailing, to: .leading, of: view, withOffset: -5)
     }
     
     private func setupContent() {
         let attrString = NSMutableAttributedString(string: content)
-        
         contentLabel.numberOfLines = 0
         contentLabel.lineBreakMode = .byWordWrapping
         let pgStyle = NSMutableParagraphStyle()
-        let newLinePGStyle = NSMutableParagraphStyle()
         pgStyle.lineSpacing = 3
-        newLinePGStyle.lineSpacing = 30
+        pgStyle.paragraphSpacing = 12
         
         let attrs: [String: Any] = [
             NSParagraphStyleAttributeName: pgStyle,
-            NSFontAttributeName: Style.lightFont(withSize: 16)
+            NSFontAttributeName: Style.lightFont(withSize: 18)
         ]
         attrString.addAttributes(attrs, range: NSMakeRange(0, content.characters.count))
-        attrString.addAttributes(forPattern: "\n",
-                              in: content,
-                              withAttributes: [NSParagraphStyleAttributeName: newLinePGStyle])
         contentLabel.attributedText = attrString
         addSubview(contentLabel)
         layoutContent()
@@ -89,22 +84,4 @@ class PostContentCell: UITableViewCell {
         contentLabel.autoPinEdge(toSuperviewEdge: .bottom)
     }
     
-}
-
-fileprivate extension NSMutableAttributedString {
-    func addAttributes(forPattern regex: String,in text: String,withAttributes attributes: [String: Any]) {
-        do {
-            let regex = try NSRegularExpression(pattern: regex)
-            regex.enumerateMatches(in: text,
-                                   options: [],
-                                   range: NSMakeRange(0,text.characters.count),
-                                   using: { match, _, _ in
-                                    
-                guard let subRange = match?.rangeAt(0) else { return }
-                attributes.forEach({ key, value in
-                    self.addAttribute(key, value: value, range: subRange)
-                })
-            })
-        } catch let error { print("invalid regex: \(error.localizedDescription)") }
-    }
 }
