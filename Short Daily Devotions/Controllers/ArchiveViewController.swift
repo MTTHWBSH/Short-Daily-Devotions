@@ -34,7 +34,7 @@ class ArchiveViewController: UITableViewController {
     
 }
 
-extension PostViewController {
+extension ArchiveViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
