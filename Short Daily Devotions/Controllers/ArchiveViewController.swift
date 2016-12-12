@@ -8,14 +8,38 @@
 
 import UIKit
 
-class ArchiveViewController: UIViewController {
+class ArchiveViewController: UITableViewController {
+    
+    var viewModel: ArchiveViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel()
-        label.text = "Archive"
-        view.addSubview(label)
-        label.autoCenterInSuperview()
+        setupTableView()
     }
     
+    private func setupTableView() {
+        registerCells()
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = true
+        tableView.backgroundColor = Style.grayLight
+        tableView.estimatedRowHeight = tableView.frame.height
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    
+    private func registerCells() {
+
+        
+    }
+    
+}
+
+extension PostViewController {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
 }

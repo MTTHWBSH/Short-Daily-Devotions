@@ -14,6 +14,7 @@
 		4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296371DBA95430016BE5A /* ViewModel.swift */; };
 		4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */; };
 		4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */; };
+		4D47CF551DFF688F0040F930 /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47CF541DFF688F0040F930 /* ArchiveViewModel.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
 		4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34611D70C21700BB6FA0 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		4D3296371DBA95430016BE5A /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "View Models/ViewModel.swift"; sourceTree = "<group>"; };
 		4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = Controllers/PostViewController.swift; sourceTree = "<group>"; };
 		4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArchiveViewController.swift; path = Controllers/ArchiveViewController.swift; sourceTree = "<group>"; };
+		4D47CF541DFF688F0040F930 /* ArchiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArchiveViewModel.swift; path = "View Models/ArchiveViewModel.swift"; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4D3296351DBA95130016BE5A /* PostsViewModel.swift */,
 				4D3296371DBA95430016BE5A /* ViewModel.swift */,
 				762A26A41DE6742D00AD75BA /* PostViewModel.swift */,
+				4D47CF541DFF688F0040F930 /* ArchiveViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				769F48571DC6A92900554487 /* Style.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 				4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */,
+				4D47CF551DFF688F0040F930 /* ArchiveViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
