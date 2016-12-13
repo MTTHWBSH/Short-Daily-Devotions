@@ -10,11 +10,16 @@ import UIKit
 
 class ArchiveViewController: UITableViewController {
     
-    var viewModel: ArchiveViewModel?
+    var viewModel: PostsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel?.render = { [weak self] in self?.render() }
+    }
+    
+    private func render() {
+        tableView.reloadData()
     }
     
     private func setupTableView() {
@@ -28,18 +33,17 @@ class ArchiveViewController: UITableViewController {
     }
     
     private func registerCells() {
-
-        
+        tableView.register(PostExcerptCell.self, forCellReuseIdentifier: PostExcerptCell.kReuseIdentifier)
     }
     
 }
 
 extension ArchiveViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return viewModel?.cell(forIndexPath: indexPath) ?? UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel?.numberOfPosts() ?? 0
     }
 }

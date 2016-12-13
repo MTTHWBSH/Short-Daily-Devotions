@@ -1,28 +1,29 @@
 //
-//  PostDetailsCell.swift
+//  PostExcerptCell.swift
 //  Short Daily Devotions
 //
-//  Created by Matthew Bush on 11/25/16.
+//  Created by Matt Bush on 12/13/16.
 //  Copyright © 2016 Matt Bush. All rights reserved.
 //
 
 import UIKit
 import PureLayout
 
-class PostDetailsCell: UITableViewCell {
-    
-    static let kReuseIdentifier = "PostDeatailsCell"
+class PostExcerptCell: UITableViewCell {
+
+    static let kReuseIdentifier = "PostExcerptCell"
     
     var title: String
     var date: String?
+    var excerpt: String
     
     let titleLabel = UILabel()
-    let dateLabel = UILabel()
     
-    init(title: String, date: String?) {
+    init(title: String, date: String?, excerpt: String) {
         self.title = title
         self.date = date
-        super.init(style: .default, reuseIdentifier: PostDetailsCell.kReuseIdentifier)
+        self.excerpt = excerpt
+        super.init(style: .default, reuseIdentifier: PostExcerptCell.kReuseIdentifier)
         self.styleView()
         self.setupTitle()
         self.setupDate()
@@ -47,14 +48,7 @@ class PostDetailsCell: UITableViewCell {
     }
     
     private func setupDate() {
-        dateLabel.text = date
-        dateLabel.font = Style.lightFont(withSize: 16)
-        dateLabel.numberOfLines = 0
-        addSubview(dateLabel)
-        dateLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 5)
-        dateLabel.autoPinEdge(.leading, to: .leading, of: titleLabel, withOffset: 0)
-        dateLabel.autoPinEdge(.trailing, to: .trailing, of: titleLabel, withOffset: 0)
-        dateLabel.autoPinEdge(toSuperviewEdge: .bottom)
+
     }
 
 }

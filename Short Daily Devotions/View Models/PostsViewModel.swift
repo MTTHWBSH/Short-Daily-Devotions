@@ -33,12 +33,28 @@ class PostsViewModel: ViewModel {
         }
     }
     
+    func morePosts(page: Int) {
+
+    }
+    
+    // MARK: Post Helpers
+    
     func latestPost() -> Post? {
         return posts.first ?? nil
     }
     
     func postViewModel(forPost post: Post) -> PostViewModel {
         return PostViewModel(post: post)
+    }
+    
+    // MARK: Archive TableView DataSource
+    
+    func numberOfPosts() -> Int {
+        return posts.count
+    }
+    
+    func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
+        return PostExcerptCell(title: "A post title", date: "December 12, 2016", excerpt: "Here is an excerpt")
     }
     
 }

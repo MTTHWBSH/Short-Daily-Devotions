@@ -100,6 +100,7 @@ class PostsViewController: UIPageViewController {
             postVC.viewModel = viewModel.postViewModel(forPost: post)
             setViewControllers([postVC], direction: .reverse, animated: animated, completion: nil)
         case Posts.archive.rawValue:
+            archiveVC.viewModel = viewModel
             setViewControllers([archiveVC], direction: .forward, animated: animated, completion: nil)
         default: break
         }
