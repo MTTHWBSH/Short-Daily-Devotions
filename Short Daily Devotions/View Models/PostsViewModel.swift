@@ -59,8 +59,8 @@ class PostsViewModel: ViewModel {
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         let viewModel = postViewModel(forPost: post)
-        return PostExcerptCell(title: viewModel.formattedTitle(forTitle: post.title),
-                               date: viewModel.formattedDate(forDate: post.date),
+        return PostExcerptCell(title: viewModel.titleString,
+                               date: viewModel.dateString,
                                excerpt: post.excerpt ?? "")
     }
     

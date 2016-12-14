@@ -28,16 +28,20 @@ class PostViewModel: ViewModel {
         super.init()
     }
     
-    private var dateString: String? {
+    var dateString: String? {
         guard let date = post.date else { return nil }
         return formattedDate(forDate: date)
     }
     
+    var titleString: String {
+        return formattedTitle(forTitle: post.title)
+    }
+    
     // MARK: Post Formatting
     
-    func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
+    private func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
     
-    func formattedTitle(forTitle title: String) -> String {
+    private func formattedTitle(forTitle title: String) -> String {
         guard let titleData = title.data(using: String.Encoding.unicode, allowLossyConversion: true),
             let attrTitle = try? NSMutableAttributedString(data: titleData,
                                                     options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
@@ -63,7 +67,7 @@ class PostViewModel: ViewModel {
     
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        case PostSections.details.rawValue: return PostDetailsCell(title: formattedTitle(forTitle: post.title), date: dateString)
+        case PostSections.details.rawValue: return PostDetailsCell(title: titleString, date: dateString)
         case PostSections.body.rawValue:    return PostContentCell(verse: formattedBlockQuote(), content: formattedContent())
         default: return UITableViewCell()
         }
