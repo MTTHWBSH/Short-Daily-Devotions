@@ -61,7 +61,7 @@ class PostsViewModel: ViewModel {
         let viewModel = postViewModel(forPost: post)
         return PostExcerptCell(title: viewModel.titleString,
                                date: viewModel.dateString,
-                               excerpt: post.excerpt ?? "")
+                               excerpt: viewModel.excerptString)
     }
     
 }

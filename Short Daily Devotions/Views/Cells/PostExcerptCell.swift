@@ -69,7 +69,7 @@ class PostExcerptCell: UITableViewCell {
         excerptLabel.font = Style.regularFont(withSize: 14)
         excerptLabel.numberOfLines = 0
         addSubview(excerptLabel)
-        excerptLabel.autoPinEdge(.top, to: .bottom, of: dateLabel)
+        excerptLabel.autoPinEdge(.top, to: .bottom, of: dateLabel, withOffset: 5)
         excerptLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 8)
         excerptLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 8)
         excerptLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 8)

@@ -34,19 +34,27 @@ class PostViewModel: ViewModel {
     }
     
     var titleString: String {
-        return formattedTitle(forTitle: post.title)
+        return formattedString(forHTMLString: post.title)
+    }
+    
+    var excerptString: String {
+        guard let excerpt = post.excerpt?
+            .replacingOccurrences(of: "Daily Devotional Bible Verses", with: "")
+            .replacingOccurrences(of: "Daily Devotional Bible Verse", with: "")
+            .replacingOccurrences(of: "Read more&#8230;", with: "") else { return "" }
+        return formattedString(forHTMLString: excerpt)
     }
     
     // MARK: Post Formatting
     
     private func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
     
-    private func formattedTitle(forTitle title: String) -> String {
-        guard let titleData = title.data(using: String.Encoding.unicode, allowLossyConversion: true),
-            let attrTitle = try? NSMutableAttributedString(data: titleData,
-                                                    options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
-                                                    documentAttributes: nil) else { return "" }
-        return attrTitle.string
+    private func formattedString(forHTMLString string: String) -> String {
+        guard let stringData = string.data(using: String.Encoding.unicode, allowLossyConversion: true),
+            let attr = try? NSMutableAttributedString(data: stringData,
+                                                      options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+                                                      documentAttributes: nil) else { return "" }
+        return attr.string
     }
     
     private func formattedBlockQuote() -> String {
