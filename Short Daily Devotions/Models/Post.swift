@@ -52,6 +52,5 @@ fileprivate func extractContent(object: Any?) throws -> String {
         let formattedDoc = HTML(html: obj, encoding: .utf8) else { throw MapperError.convertibleError(value: object, type: String.self) }
     if let bq = formattedDoc.xpath("//blockquote").first { formattedDoc.body?.removeChild(bq) }
     if let firstPg = formattedDoc.xpath("//p").first { formattedDoc.body?.removeChild(firstPg) }
-    guard let formattedContent = formattedDoc.body?.content else { throw MapperError.convertibleError(value: object, type: String.self) }
-    return formattedContent
+    return formattedDoc.body?.content ?? ""
 }
