@@ -11,7 +11,6 @@ import Kanna
 
 struct Post: Mappable {
     
-//    let doc: HTMLDocument?
     let id: Int
     let title: String
     let verse: String
