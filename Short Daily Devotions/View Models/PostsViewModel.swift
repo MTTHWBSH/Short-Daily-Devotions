@@ -23,14 +23,17 @@ class PostsViewModel: ViewModel {
             guard let data = response.data,
             let json = try? JSONSerialization.jsonObject(with: data, options: []),
             let posts = json as? NSArray else { return }
-            
-            posts.forEach { json in
-                guard let postDict = json as? NSDictionary,
-                let post = Post.from(postDict) else { return }
-                self?.posts.append(post)
-            }
-            self?.render?()
+            self?.unwrap(postArray: posts)
         }
+    }
+    
+    private func unwrap(postArray: NSArray) {
+        postArray.forEach { json in
+            guard let postDict = json as? NSDictionary,
+                let post = Post.from(postDict) else { return }
+            posts.append(post)
+        }
+        render?()
     }
     
     func morePosts(page: Int) {
@@ -54,7 +57,11 @@ class PostsViewModel: ViewModel {
     }
     
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
-        return PostExcerptCell(title: "A post title", date: "December 12, 2016", excerpt: "Here is an excerpt")
+        let post = posts[indexPath.row]
+        let viewModel = postViewModel(forPost: post)
+        return PostExcerptCell(title: viewModel.formattedTitle(forTitle: post.title),
+                               date: viewModel.formattedDate(forDate: post.date),
+                               excerpt: post.excerpt ?? "")
     }
     
 }

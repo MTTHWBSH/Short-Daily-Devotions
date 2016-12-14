@@ -51,7 +51,7 @@ class PostContentCell: UITableViewCell {
     }
     
     private func addLeftBorder(toView view: UIView) {
-        border.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
+        border.backgroundColor = Style.borderColor
         addSubview(border)
         border.autoSetDimension(.width, toSize: 3)
         border.autoPinEdge(.top, to: .top, of: view)

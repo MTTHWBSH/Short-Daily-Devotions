@@ -15,8 +15,9 @@ struct Style {
     static let green = UIColor(red: 167/255, green: 167/255, blue: 69/255, alpha: 1)
     static let grayLight = UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1)
     static let gray = UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1)
-    static var white = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-    static var black = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+    static let white = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+    static let black = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+    static let borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.1)
     
     // MARK: Fonts
     

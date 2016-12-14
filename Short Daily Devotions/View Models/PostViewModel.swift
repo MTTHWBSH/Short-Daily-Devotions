@@ -35,9 +35,9 @@ class PostViewModel: ViewModel {
     
     // MARK: Post Formatting
     
-    private func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
+    func formattedDate(forDate date: Date) -> String { return formatter.string(from: date) }
     
-    private func formattedTitle(forTitle title: String) -> String {
+    func formattedTitle(forTitle title: String) -> String {
         guard let titleData = title.data(using: String.Encoding.unicode, allowLossyConversion: true),
             let attrTitle = try? NSMutableAttributedString(data: titleData,
                                                     options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],

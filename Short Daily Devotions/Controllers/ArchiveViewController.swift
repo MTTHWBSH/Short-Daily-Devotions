@@ -24,7 +24,8 @@ class ArchiveViewController: UITableViewController {
     
     private func setupTableView() {
         registerCells()
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = Style.borderColor
         tableView.allowsSelection = true
         tableView.backgroundColor = Style.grayLight
         tableView.estimatedRowHeight = tableView.frame.height
