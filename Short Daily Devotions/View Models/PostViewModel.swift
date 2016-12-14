@@ -22,7 +22,6 @@ class PostViewModel: ViewModel {
     }()
     
     private var post: Post
-    private var processed = false
     
     init(post: Post) {
         self.post = post
@@ -58,21 +57,6 @@ class PostViewModel: ViewModel {
         return attr.string
     }
     
-    private func formattedBlockQuote() -> String {
-        return post.doc?.xpath("//blockquote").first?.content ?? ""
-    }
-    
-    private func formattedContent() -> String {
-        let formattedDoc = post.doc
-        if !processed {
-            if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
-            if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
-            processed = true
-        }
-        guard let formattedContent = formattedDoc?.body?.content else { return "" }
-        return formattedContent
-    }
-    
     // MARK: TableView DataSource
     
     func postSections() -> Int { return PostSections.count.rawValue }
@@ -80,7 +64,7 @@ class PostViewModel: ViewModel {
     func cell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case PostSections.details.rawValue: return PostDetailsCell(title: titleString, date: dateString)
-        case PostSections.body.rawValue:    return PostContentCell(verse: formattedBlockQuote(), content: formattedContent())
+        case PostSections.body.rawValue:    return PostContentCell(verse: post.verse, content: post.content)
         default: return UITableViewCell()
         }
     }

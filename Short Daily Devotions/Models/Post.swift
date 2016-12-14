@@ -11,20 +11,21 @@ import Kanna
 
 struct Post: Mappable {
     
+//    let doc: HTMLDocument?
     let id: Int
     let title: String
+    let verse: String
     let content: String
     let date: Date?
     let excerpt: String?
-    let doc: HTMLDocument?
     
     init(map: Mapper) throws {
         try id = map.from("id")
         try title = map.from("title.rendered")
-        try content = map.from("content.rendered")
+        try verse = map.from("content.rendered", transformation: extractVerse)
+        try content = map.from("content.rendered", transformation: extractContent)
         date = map.optionalFrom("date", transformation: extractDate)
         excerpt = map.optionalFrom("excerpt.rendered")
-        doc = HTML(html: content, encoding: .utf8)
     }
     
 }
@@ -36,8 +37,21 @@ fileprivate var formatter: DateFormatter = {
 }()
 
 fileprivate func extractDate(object: Any?) throws -> Date? {
-    guard let date = object as? String else {
-        throw MapperError.convertibleError(value: object, type: String.self)
-    }
+    guard let date = object as? String else { throw MapperError.convertibleError(value: object, type: String.self) }
     return formatter.date(from: date)
+}
+
+fileprivate func extractVerse(object: Any?) throws -> String {
+    guard let obj = object as? String,
+        let formattedDoc = HTML(html: obj, encoding: .utf8) else { throw MapperError.convertibleError(value: object, type: String.self) }
+    return formattedDoc.xpath("//blockquote").first?.content ?? ""
+}
+
+fileprivate func extractContent(object: Any?) throws -> String {
+    guard let obj = object as? String,
+        let formattedDoc = HTML(html: obj, encoding: .utf8) else { throw MapperError.convertibleError(value: object, type: String.self) }
+    if let bq = formattedDoc.xpath("//blockquote").first { formattedDoc.body?.removeChild(bq) }
+    if let firstPg = formattedDoc.xpath("//p").first { formattedDoc.body?.removeChild(firstPg) }
+    guard let formattedContent = formattedDoc.body?.content else { throw MapperError.convertibleError(value: object, type: String.self) }
+    return formattedContent
 }
