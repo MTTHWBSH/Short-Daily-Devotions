@@ -47,4 +47,12 @@ extension ArchiveViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.numberOfPosts() ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let post = viewModel?.post(forIndexPath: indexPath),
+            let vm = viewModel?.postViewModel(forPost: post) else { return }
+        let vc = PostViewController()
+        vc.viewModel = vm
+        navigationController?.show(vc, sender: self)
+    }
 }

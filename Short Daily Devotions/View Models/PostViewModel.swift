@@ -22,6 +22,7 @@ class PostViewModel: ViewModel {
     }()
     
     private var post: Post
+    private var processed = false
     
     init(post: Post) {
         self.post = post
@@ -63,8 +64,11 @@ class PostViewModel: ViewModel {
     
     private func formattedContent() -> String {
         let formattedDoc = post.doc
-        if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
-        if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
+        if !processed {
+            if let bq = formattedDoc?.xpath("//blockquote").first { formattedDoc?.body?.removeChild(bq) }
+            if let firstPg = formattedDoc?.xpath("//p").first { formattedDoc?.body?.removeChild(firstPg) }
+            processed = true
+        }
         guard let formattedContent = formattedDoc?.body?.content else { return "" }
         return formattedContent
     }

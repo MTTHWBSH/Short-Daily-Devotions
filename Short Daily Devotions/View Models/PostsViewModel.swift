@@ -50,6 +50,10 @@ class PostsViewModel: ViewModel {
         return PostViewModel(post: post)
     }
     
+    func post(forIndexPath idx: IndexPath) -> Post {
+        return posts[idx.row]
+    }
+    
     // MARK: Archive TableView DataSource
     
     func numberOfPosts() -> Int {
