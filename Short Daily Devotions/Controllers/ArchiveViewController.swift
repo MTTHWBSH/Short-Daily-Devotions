@@ -10,6 +10,7 @@ import UIKit
 
 class ArchiveViewController: UITableViewController {
     
+    var footerView: UITableViewHeaderFooterView = { return PostsLoadingFooterView() }()
     var viewModel: PostsViewModel?
 
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class ArchiveViewController: UITableViewController {
     
     private func setupTableView() {
         registerCells()
+        tableView.sectionFooterHeight = 0
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = Style.borderColor
         tableView.allowsSelection = true
@@ -35,6 +37,7 @@ class ArchiveViewController: UITableViewController {
     
     private func registerCells() {
         tableView.register(PostExcerptCell.self, forCellReuseIdentifier: PostExcerptCell.kReuseIdentifier)
+        tableView.register(PostsLoadingFooterView.self, forHeaderFooterViewReuseIdentifier: PostsLoadingFooterView.kReuseIdentifier)
     }
     
 }
@@ -55,12 +58,19 @@ extension ArchiveViewController {
         vc.viewModel = vm
         navigationController?.show(vc, sender: self)
     }
+
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
+    }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard let vm = viewModel else { return }
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height - 100)
-        && !viewModel?.allPostsLoaded {
-            tableView.tableFooterView = UIView()
-            viewModel?.nextPageOfPosts { tableView.tableFooterView = nil }
+        && !vm.allPostsLoaded {
+            tableView.sectionFooterHeight = 40
+            let offset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            scrollView.setContentOffset(offset, animated: true)
+            vm.nextPageOfPosts { [weak self] _ in self?.tableView.sectionFooterHeight = 0.0 }
         }
     }
 }

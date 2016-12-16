@@ -34,7 +34,7 @@ class PostsViewModel: ViewModel {
     }
     
     private func unwrap(postArray: NSArray) {
-        if postArray.isEmpty { allPostsLoaded = true; return }
+        if postArray.count <= 0 { allPostsLoaded = true; return }
         postArray.forEach { json in
             guard let postDict = json as? NSDictionary,
                 let post = Post.from(postDict) else { return }
