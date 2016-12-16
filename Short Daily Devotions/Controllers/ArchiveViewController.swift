@@ -55,4 +55,12 @@ extension ArchiveViewController {
         vc.viewModel = vm
         navigationController?.show(vc, sender: self)
     }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height - 100)
+        && !viewModel?.allPostsLoaded {
+            tableView.tableFooterView = UIView()
+            viewModel?.nextPageOfPosts { tableView.tableFooterView = nil }
+        }
+    }
 }

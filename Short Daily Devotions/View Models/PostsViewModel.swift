@@ -11,15 +11,21 @@ import Alamofire
 class PostsViewModel: ViewModel {
     
     private var posts: [Post]
+    private var postsURL: String
+    private var currentPage = 1
+    var allPostsLoaded = false
     
     init(postsURL: String) {
         self.posts = []
+        self.postsURL = postsURL
         super.init()
-        self.loadPosts(postsURL: postsURL)
+        self.loadPosts(postsURL: postsURL, page: 1, completion: nil)
     }
     
-    private func loadPosts(postsURL: String) {
-        Alamofire.request(postsURL).responseJSON { [weak self] response in
+    private func loadPosts(postsURL: String, page: Int, completion: ((Bool) -> Void)?) {
+        let params: [String: Any] = ["page": page]
+        Alamofire.request(postsURL, parameters: params)
+            .responseJSON { [weak self] response in
             guard let data = response.data,
             let json = try? JSONSerialization.jsonObject(with: data, options: []),
             let posts = json as? NSArray else { return }
@@ -28,6 +34,7 @@ class PostsViewModel: ViewModel {
     }
     
     private func unwrap(postArray: NSArray) {
+        if postArray.isEmpty { allPostsLoaded = true; return }
         postArray.forEach { json in
             guard let postDict = json as? NSDictionary,
                 let post = Post.from(postDict) else { return }
@@ -36,14 +43,19 @@ class PostsViewModel: ViewModel {
         render?()
     }
     
-    func morePosts(page: Int) {
-
-    }
-    
     // MARK: Post Helpers
     
     func latestPost() -> Post? {
         return posts.first ?? nil
+    }
+    
+    func nextPageOfPosts(completion: ((Void) -> Void)?) {
+        let nextPage = currentPage + 1
+        loadPosts(postsURL: postsURL, page: nextPage) { [weak self] morePosts in
+            guard let strongSelf = self else { return }
+            strongSelf.currentPage = morePosts ? nextPage : strongSelf.currentPage
+            completion?()
+        }
     }
     
     func postViewModel(forPost post: Post) -> PostViewModel {
