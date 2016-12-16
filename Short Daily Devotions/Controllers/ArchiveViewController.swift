@@ -70,7 +70,9 @@ extension ArchiveViewController {
             tableView.sectionFooterHeight = 40
             let offset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
             scrollView.setContentOffset(offset, animated: true)
-            vm.nextPageOfPosts { [weak self] _ in self?.tableView.sectionFooterHeight = 0.0 }
+            vm.nextPageOfPosts { [weak self] _ in
+                self?.tableView.sectionFooterHeight = 0.0
+            }
         }
     }
 }
