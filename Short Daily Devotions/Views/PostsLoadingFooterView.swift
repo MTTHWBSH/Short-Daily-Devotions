@@ -9,12 +9,10 @@
 import UIKit
 import PureLayout
 
-class PostsLoadingFooterView: UITableViewHeaderFooterView {
+class PostsLoadingFooterView: UIView {
     
-    static let kReuseIdentifier = "PostsLoadingFooterView"
-
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: PostsLoadingFooterView.kReuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60))
         setupView()
     }
     
