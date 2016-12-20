@@ -25,7 +25,9 @@ class ArchiveViewController: UITableViewController {
     
     private func setupTableView() {
         registerCells()
-        tableView.sectionFooterHeight = 0
+        footerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60)
+        tableView.tableFooterView = footerView
+        tableView.tableFooterView?.isHidden = true
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = Style.borderColor
         tableView.allowsSelection = true
@@ -59,20 +61,14 @@ extension ArchiveViewController {
         navigationController?.show(vc, sender: self)
     }
 
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return footerView
-    }
-    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         guard let vm = viewModel else { return }
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height - 100)
         && !vm.allPostsLoaded {
-            tableView.sectionFooterHeight = 40
+            tableView.tableFooterView?.isHidden = false
             let offset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
             scrollView.setContentOffset(offset, animated: true)
-            vm.nextPageOfPosts { [weak self] _ in
-                self?.tableView.sectionFooterHeight = 0.0
-            }
+            vm.nextPageOfPosts { [weak self] _ in self?.tableView.tableFooterView?.isHidden = true }
         }
     }
 }
