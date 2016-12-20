@@ -90,6 +90,7 @@ class PostsViewController: UIPageViewController {
     
     @objc private func showMoreInfoView() {
         let vc = MoreInfoViewController()
+        vc.viewModel = MoreInfoViewModel()
         show(vc, sender: self)
     }
     
