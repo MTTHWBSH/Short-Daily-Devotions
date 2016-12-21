@@ -36,6 +36,13 @@ class PostExcerptCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = nil
+        dateLabel.text = nil
+        excerptLabel.text = nil
+    }
+    
     private func styleView() {
         backgroundColor = Style.grayLight
         selectionStyle = .none

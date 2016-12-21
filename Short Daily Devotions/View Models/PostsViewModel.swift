@@ -27,9 +27,10 @@ class PostsViewModel: ViewModel {
         Alamofire.request(postsURL, parameters: params)
             .responseJSON { [weak self] response in
             guard let data = response.data,
-            let json = try? JSONSerialization.jsonObject(with: data, options: []),
-            let posts = json as? NSArray else { return }
+                let json = try? JSONSerialization.jsonObject(with: data, options: []),
+                let posts = json as? NSArray else { completion?(false); return }
             self?.unwrap(postArray: posts)
+            completion?(posts.count >= 1 ? true : false)
         }
     }
     

@@ -29,8 +29,8 @@ class MoreInfoViewController: UITableViewController {
     private func setupTableView() {
         registerCells()
         tableView.tableFooterView = footerView
-        tableView.tableFooterView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100)
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = Style.borderColor
         tableView.allowsSelection = true
         tableView.backgroundColor = Style.grayLight
         tableView.estimatedRowHeight = tableView.frame.height
@@ -59,10 +59,6 @@ extension MoreInfoViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
     }
 }
 

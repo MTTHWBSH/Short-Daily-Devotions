@@ -26,6 +26,7 @@ class ArchiveViewController: UITableViewController {
     private func setupTableView() {
         registerCells()
         tableView.tableFooterView = footerView
+        tableView.tableFooterView?.isHidden = true
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = Style.borderColor
         tableView.allowsSelection = true
@@ -60,7 +61,7 @@ extension ArchiveViewController {
 
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         guard let vm = viewModel else { return }
-        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height)
+        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height - 100)
         && !vm.allPostsLoaded {
             tableView.tableFooterView?.isHidden = false
             vm.nextPageOfPosts { [weak self] _ in self?.tableView.tableFooterView?.isHidden = true }
