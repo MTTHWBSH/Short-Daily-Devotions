@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03CD303E3087F4E58819227C /* Pods_Short_Daily_Devotions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD9F16108750C6C92B76865 /* Pods_Short_Daily_Devotions.framework */; };
-		4D31BD351E09C236004260F2 /* SocialMediaFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31BD341E09C236004260F2 /* SocialMediaFooterView.swift */; };
 		4D31BD371E09C365004260F2 /* MoreInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31BD361E09C365004260F2 /* MoreInfoViewModel.swift */; };
 		4D31BD391E09C4EC004260F2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31BD381E09C4EC004260F2 /* InfoCell.swift */; };
 		4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3296301DBA8CCE0016BE5A /* Constants.swift */; };
@@ -18,6 +17,7 @@
 		4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */; };
 		4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */; };
 		4D47CF571E00A3820040F930 /* PostExcerptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47CF561E00A3820040F930 /* PostExcerptCell.swift */; };
+		4D7F3A671E0B014A00CB9464 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F3A661E0B014A00CB9464 /* SocialCell.swift */; };
 		4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */; };
 		4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A345E1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld */; };
 		4D8A34621D70C21700BB6FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A34611D70C21700BB6FA0 /* Assets.xcassets */; };
@@ -56,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D31BD341E09C236004260F2 /* SocialMediaFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialMediaFooterView.swift; path = Views/SocialMediaFooterView.swift; sourceTree = "<group>"; };
 		4D31BD361E09C365004260F2 /* MoreInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreInfoViewModel.swift; path = "View Models/MoreInfoViewModel.swift"; sourceTree = "<group>"; };
 		4D31BD381E09C4EC004260F2 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCell.swift; path = Views/Cells/Info/InfoCell.swift; sourceTree = "<group>"; };
 		4D3296301DBA8CCE0016BE5A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = Controllers/PostViewController.swift; sourceTree = "<group>"; };
 		4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArchiveViewController.swift; path = Controllers/ArchiveViewController.swift; sourceTree = "<group>"; };
 		4D47CF561E00A3820040F930 /* PostExcerptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostExcerptCell.swift; path = Views/Cells/Post/PostExcerptCell.swift; sourceTree = "<group>"; };
+		4D7F3A661E0B014A00CB9464 /* SocialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialCell.swift; path = Views/Cells/Info/SocialCell.swift; sourceTree = "<group>"; };
 		4D8A34541D70C21700BB6FA0 /* Short Daily Devotions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Short Daily Devotions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8A34571D70C21700BB6FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		4D8A345F1D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Short_Daily_Devotions.xcdatamodel; sourceTree = "<group>"; };
@@ -125,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4D31BD381E09C4EC004260F2 /* InfoCell.swift */,
+				4D7F3A661E0B014A00CB9464 /* SocialCell.swift */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -244,7 +245,6 @@
 			children = (
 				765C76121DE8EA9C00E21B3F /* Cells */,
 				4DFF13CD1E048404008265ED /* PostsLoadingFooterView.swift */,
-				4D31BD341E09C236004260F2 /* SocialMediaFooterView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -497,7 +497,6 @@
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				769F48631DC6B3C800554487 /* Post.swift in Sources */,
 				4D31BD371E09C365004260F2 /* MoreInfoViewModel.swift in Sources */,
-				4D31BD351E09C236004260F2 /* SocialMediaFooterView.swift in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
 				764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */,
@@ -508,6 +507,7 @@
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 				4D31BD391E09C4EC004260F2 /* InfoCell.swift in Sources */,
 				4D32A6401DE4E03E00535EA3 /* PostViewController.swift in Sources */,
+				4D7F3A671E0B014A00CB9464 /* SocialCell.swift in Sources */,
 				4D47CF571E00A3820040F930 /* PostExcerptCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

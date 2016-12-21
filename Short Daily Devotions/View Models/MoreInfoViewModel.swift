@@ -9,10 +9,16 @@
 import UIKit
 
 enum InfoOptions: Int {
-    case about, support, beliefs, contact, count
+    case about, support, beliefs, contact, social, count
 }
 
 class MoreInfoViewModel: ViewModel {
+    
+    let kFacebookURL    = URL(string: "https://www.facebook.com/shortdailydevotions")
+    let kTwitterURL     = URL(string: "https://www.twitter.com/shortdevotions")
+    let kInstagramURL   = URL(string: "https://www.instagram.com/shortdailydevotions")
+    let kContactEmail   = "shortdailydevotions@gmail.com"
+    let kContactAddress = "6098 Red Stag Dr.\nPort Orange, FL 32128"
     
     func numberOfOptions() -> Int {
         return InfoOptions.count.rawValue
@@ -28,7 +34,19 @@ class MoreInfoViewModel: ViewModel {
             return InfoCell(title: "Beliefs")
         case InfoOptions.contact.rawValue:
             return InfoCell(title: "Contact")
+        case InfoOptions.social.rawValue:
+            return SocialCell(viewModel: self)
         default: return UITableViewCell()
+        }
+    }
+    
+    func heightForRow(atIndexPath indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case InfoOptions.about.rawValue, InfoOptions.support.rawValue, InfoOptions.beliefs.rawValue, InfoOptions.contact.rawValue:
+            return 80
+        case InfoOptions.social.rawValue:
+            return 120
+        default: return 0
         }
     }
     
