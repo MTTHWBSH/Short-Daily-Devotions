@@ -36,6 +36,8 @@
 		769F48601DC6B18600554487 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485C1DC6B18600554487 /* Lato-LightItalic.ttf */; };
 		769F48611DC6B18600554487 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 769F485D1DC6B18600554487 /* Lato-Regular.ttf */; };
 		769F48631DC6B3C800554487 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48621DC6B3C800554487 /* Post.swift */; };
+		76C424C01E0B891B00C01B39 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424BF1E0B891B00C01B39 /* PageViewController.swift */; };
+		76C424C21E0B8AED00C01B39 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C11E0B8AED00C01B39 /* PageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		769F485C1DC6B18600554487 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "Assets/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		769F485D1DC6B18600554487 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "Assets/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		769F48621DC6B3C800554487 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
+		76C424BF1E0B891B00C01B39 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controllers/PageViewController.swift; sourceTree = "<group>"; };
+		76C424C11E0B8AED00C01B39 /* PageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewModel.swift; path = "View Models/PageViewModel.swift"; sourceTree = "<group>"; };
 		A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,7 @@
 				4D3296371DBA95430016BE5A /* ViewModel.swift */,
 				762A26A41DE6742D00AD75BA /* PostViewModel.swift */,
 				4D31BD361E09C365004260F2 /* MoreInfoViewModel.swift */,
+				76C424C11E0B8AED00C01B39 /* PageViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				76190DEF1DC97DCD002EA6E6 /* MoreInfoViewController.swift */,
 				4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */,
 				4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */,
+				76C424BF1E0B891B00C01B39 /* PageViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */,
 				4DFF13CE1E048404008265ED /* PostsLoadingFooterView.swift in Sources */,
 				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
+				76C424C01E0B891B00C01B39 /* PageViewController.swift in Sources */,
 				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
 				765C76171DE8EB1600E21B3F /* PostContentCell.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
@@ -499,6 +506,7 @@
 				4D31BD371E09C365004260F2 /* MoreInfoViewModel.swift in Sources */,
 				4D8A34581D70C21700BB6FA0 /* AppDelegate.swift in Sources */,
 				4D3296381DBA95430016BE5A /* ViewModel.swift in Sources */,
+				76C424C21E0B8AED00C01B39 /* PageViewModel.swift in Sources */,
 				764C8F3D1DC6CB51006CA325 /* Configuration.swift in Sources */,
 				765C76151DE8EAF400E21B3F /* PostDetailsCell.swift in Sources */,
 				4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */,

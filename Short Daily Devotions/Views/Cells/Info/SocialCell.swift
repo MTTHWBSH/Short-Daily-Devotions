@@ -29,6 +29,7 @@ class SocialCell: UITableViewCell {
     
     private func setupView() {
         backgroundColor = Style.grayLight
+        selectionStyle = .none
         setupWrapperView()
         addSocialButtons()
     }

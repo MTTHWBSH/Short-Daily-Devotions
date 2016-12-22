@@ -23,6 +23,7 @@ class MoreInfoViewController: UITableViewController {
         viewModel?.render = { [weak self] in self?.render() }
         title = "Info"
         view.backgroundColor = Style.grayLight
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         setupTableView()
     }
     
@@ -58,14 +59,11 @@ extension MoreInfoViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        guard let vc = viewModel?.viewController(forIndexPath: indexPath) else { return }
+        navigationController?.show(vc, sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
 }
-
-/*
-Button:  https://www.aplos.com/aws/give/short_daily_devotions/general
-*/
