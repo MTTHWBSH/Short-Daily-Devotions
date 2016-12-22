@@ -14,12 +14,15 @@ enum InfoOptions: Int {
 
 class MoreInfoViewModel: ViewModel {
     
-    let kContactEmail   = "shortdailydevotions@gmail.com"
-    let kContactAddress = "6098 Red Stag Dr.\nPort Orange, FL 32128"
-    let kFacebookURL    = URL(string: "https://www.facebook.com/shortdailydevotions")
-    let kTwitterURL     = URL(string: "https://www.twitter.com/shortdevotions")
-    let kInstagramURL   = URL(string: "https://www.instagram.com/shortdailydevotions")
-    let kSupportURL     = URL(string: "https://www.aplos.com/aws/give/short_daily_devotions/general")
+    private let kAboutPageID    = "49"
+    private let kBeliefsPageID  = "1981"
+    
+    let kContactEmail           = "shortdailydevotions@gmail.com"
+    let kContactAddress         = "6098 Red Stag Dr.\nPort Orange, FL 32128"
+    let kFacebookURL            = URL(string: "https://www.facebook.com/shortdailydevotions")
+    let kTwitterURL             = URL(string: "https://www.twitter.com/shortdevotions")
+    let kInstagramURL           = URL(string: "https://www.instagram.com/shortdailydevotions")
+    let kSupportURL             = URL(string: "https://www.aplos.com/aws/give/short_daily_devotions/general")
     
     func numberOfOptions() -> Int {
         return InfoOptions.count.rawValue
@@ -49,9 +52,9 @@ class MoreInfoViewModel: ViewModel {
     
     func viewController(forIndexPath indexPath: IndexPath) -> UIViewController? {
         switch indexPath.row {
-        case InfoOptions.about.rawValue:   return PageViewController(viewModel: PageViewModel(pageTitle: PageTitle.about.rawValue))
+        case InfoOptions.about.rawValue:   return PageViewController(viewModel: PageViewModel(pageID: kAboutPageID))
         case InfoOptions.support.rawValue: return UIViewController()
-        case InfoOptions.beliefs.rawValue: return PageViewController(viewModel: PageViewModel(pageTitle: PageTitle.beliefs.rawValue))
+        case InfoOptions.beliefs.rawValue: return PageViewController(viewModel: PageViewModel(pageID: kBeliefsPageID))
         case InfoOptions.contact.rawValue: return UIViewController()
         default: return nil
         }

@@ -8,29 +8,31 @@
 
 import Alamofire
 
-enum PageTitle: String {
-    case about = "About", beliefs = "Beliefs"
-}
-
 class PageViewModel: ViewModel {
     
-    private var pageTitle: String
+    private var pageID: String
+    private var page: Post? { didSet { render?() } }
     
-    init(pageTitle: String) {
-        self.pageTitle = pageTitle
+    init(pageID: String) {
+        self.pageID = pageID
         super.init()
+        loadPage(id: pageID, completion: nil)
     }
     
-    private func loadPosts(pageID: String, completion: ((Void) -> Void)?) {
+    private func loadPage(id: String, completion: ((Void) -> Void)?) {
         Alamofire.request(Constants.kPageBaseURL + pageID)
             .responseJSON { [weak self] response in
                 guard let data = response.data,
                     let json = try? JSONSerialization.jsonObject(with: data, options: []),
-                    let posts = json as? NSArray else { return }
+                    let dict = json as? NSDictionary,
+                    let page = Post.from(dict) else { return }
+                self?.page = page
                 completion?()
         }
     }
     
-    func titleForPage() -> String { return pageTitle }
+    func titleForPage() -> String { return page?.title ?? "" }
+    
+    func pageContent() -> String { return page?.content ?? "" }
     
 }
