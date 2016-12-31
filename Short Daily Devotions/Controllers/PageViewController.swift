@@ -26,10 +26,10 @@ class PageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         viewModel.render = { [weak self] _ in self?.removeActivityIndicator();
                                               self?.setTitle();
                                               self?.addTextView() }
-        setupView()
     }
     
     private func setTitle() { title = viewModel.titleForPage() }
@@ -37,7 +37,6 @@ class PageViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = Style.grayLight
         addActivityIndicator()
-        addTextView()
     }
     
     private func addActivityIndicator() {

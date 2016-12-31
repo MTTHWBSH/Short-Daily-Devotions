@@ -12,7 +12,6 @@ struct Style {
     
     // MARK: Colors
     static let blue         = UIColor(red: 33/255, green: 55/255, blue: 79/255, alpha: 1)
-    static let green        = UIColor(red: 167/255, green: 167/255, blue: 69/255, alpha: 1)
     static let pink         = UIColor(red: 201/255, green: 47/255, blue: 119/255, alpha: 1)
     static let grayLight    = UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1)
     static let gray         = UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1)
