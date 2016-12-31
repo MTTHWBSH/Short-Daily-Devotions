@@ -10,7 +10,7 @@ import UIKit
 import PureLayout
 import MessageUI
 
-class ContactViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ContactViewController: UIViewController {
 
     var viewModel: ContactViewModel
     
@@ -66,13 +66,13 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         vc.setToRecipients([viewModel.emailAddress()])
         vc.setSubject("Short Daily Devotions")
         vc.setMessageBody("", isHTML: false)
-        navigationController?.show(vc, sender: self)
+        present(vc, animated: true, completion: nil)
     }
 
 }
 
-extension ContactViewController {
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+extension ContactViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
 }
