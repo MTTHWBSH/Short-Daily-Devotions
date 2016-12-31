@@ -8,7 +8,6 @@ def all_pods
     pod 'ModelMapper'
     pod 'Kanna'
     pod 'PureLayout'
-    pod 'Google/Analytics'
 end
 
 target 'Short Daily Devotions' do
