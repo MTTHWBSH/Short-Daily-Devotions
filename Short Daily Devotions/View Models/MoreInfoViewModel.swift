@@ -16,13 +16,9 @@ class MoreInfoViewModel: ViewModel {
     
     private let kAboutPageID    = "49"
     private let kBeliefsPageID  = "1981"
-    
-    let kContactEmail           = "shortdailydevotions@gmail.com"
-    let kContactAddress         = "6098 Red Stag Dr.\nPort Orange, FL 32128"
     let kFacebookURL            = URL(string: "https://www.facebook.com/shortdailydevotions")
     let kTwitterURL             = URL(string: "https://www.twitter.com/shortdevotions")
     let kInstagramURL           = URL(string: "https://www.instagram.com/shortdailydevotions")
-    let kSupportURL             = URL(string: "https://www.aplos.com/aws/give/short_daily_devotions/general")
     
     func numberOfOptions() -> Int {
         return InfoOptions.count.rawValue
@@ -53,14 +49,11 @@ class MoreInfoViewModel: ViewModel {
     func viewController(forIndexPath indexPath: IndexPath) -> UIViewController? {
         switch indexPath.row {
         case InfoOptions.about.rawValue:   return PageViewController(viewModel: PageViewModel(pageID: kAboutPageID))
-        case InfoOptions.support.rawValue: return UIViewController()
+        case InfoOptions.support.rawValue: return SupportViewController(viewModel: SupportViewModel())
         case InfoOptions.beliefs.rawValue: return PageViewController(viewModel: PageViewModel(pageID: kBeliefsPageID))
-        case InfoOptions.contact.rawValue: return UIViewController()
+        case InfoOptions.contact.rawValue: return ContactViewController(viewModel: ContactViewModel())
         default: return nil
         }
     }
-    
-    func supportBodyText() -> String {
-        return "Help us to continue to reach almost 30,000 people daily with God’s word (through emails and social media). As God continues to bless us and grow, so do our expenses (hosting, email service, maintenance, backups, etc.). We are a 501(c)(3). All financial gifts are considered tax deductible.\nIf you would like to give a normal financial donation, we prefer Aplos Donations below.\nYou can also send checks to:\n\(kContactAddress)"
-    }
+
 }

@@ -38,6 +38,10 @@
 		769F48631DC6B3C800554487 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F48621DC6B3C800554487 /* Post.swift */; };
 		76C424C01E0B891B00C01B39 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424BF1E0B891B00C01B39 /* PageViewController.swift */; };
 		76C424C21E0B8AED00C01B39 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C11E0B8AED00C01B39 /* PageViewModel.swift */; };
+		76C424C41E17257300C01B39 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C31E17257300C01B39 /* SupportViewController.swift */; };
+		76C424C61E17258B00C01B39 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C51E17258B00C01B39 /* ContactViewController.swift */; };
+		76C424C81E17299F00C01B39 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C71E17299F00C01B39 /* ContactViewModel.swift */; };
+		76C424CA1E1729AD00C01B39 /* SupportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C424C91E1729AD00C01B39 /* SupportViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		769F48621DC6B3C800554487 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		76C424BF1E0B891B00C01B39 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controllers/PageViewController.swift; sourceTree = "<group>"; };
 		76C424C11E0B8AED00C01B39 /* PageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewModel.swift; path = "View Models/PageViewModel.swift"; sourceTree = "<group>"; };
+		76C424C31E17257300C01B39 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportViewController.swift; path = Controllers/SupportViewController.swift; sourceTree = "<group>"; };
+		76C424C51E17258B00C01B39 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Controllers/ContactViewController.swift; sourceTree = "<group>"; };
+		76C424C71E17299F00C01B39 /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewModel.swift; path = "View Models/ContactViewModel.swift"; sourceTree = "<group>"; };
+		76C424C91E1729AD00C01B39 /* SupportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportViewModel.swift; path = "View Models/SupportViewModel.swift"; sourceTree = "<group>"; };
 		A715A4A1935E5D6A47985309 /* Pods-Short Daily Devotions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Short Daily Devotions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Short Daily Devotions/Pods-Short Daily Devotions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +150,8 @@
 				762A26A41DE6742D00AD75BA /* PostViewModel.swift */,
 				4D31BD361E09C365004260F2 /* MoreInfoViewModel.swift */,
 				76C424C11E0B8AED00C01B39 /* PageViewModel.swift */,
+				76C424C71E17299F00C01B39 /* ContactViewModel.swift */,
+				76C424C91E1729AD00C01B39 /* SupportViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -302,6 +312,8 @@
 				4D32A63F1DE4E03E00535EA3 /* PostViewController.swift */,
 				4D32A6411DE4E04A00535EA3 /* ArchiveViewController.swift */,
 				76C424BF1E0B891B00C01B39 /* PageViewController.swift */,
+				76C424C31E17257300C01B39 /* SupportViewController.swift */,
+				76C424C51E17258B00C01B39 /* ContactViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -497,10 +509,12 @@
 			files = (
 				762A26A51DE6742D00AD75BA /* PostViewModel.swift in Sources */,
 				4DFF13CE1E048404008265ED /* PostsLoadingFooterView.swift in Sources */,
+				76C424C41E17257300C01B39 /* SupportViewController.swift in Sources */,
 				4D3296331DBA94850016BE5A /* PostsViewController.swift in Sources */,
 				76C424C01E0B891B00C01B39 /* PageViewController.swift in Sources */,
 				4D3296361DBA95130016BE5A /* PostsViewModel.swift in Sources */,
 				765C76171DE8EB1600E21B3F /* PostContentCell.swift in Sources */,
+				76C424C81E17299F00C01B39 /* ContactViewModel.swift in Sources */,
 				4D8A34601D70C21700BB6FA0 /* Short_Daily_Devotions.xcdatamodeld in Sources */,
 				769F48631DC6B3C800554487 /* Post.swift in Sources */,
 				4D31BD371E09C365004260F2 /* MoreInfoViewModel.swift in Sources */,
@@ -511,6 +525,8 @@
 				765C76151DE8EAF400E21B3F /* PostDetailsCell.swift in Sources */,
 				4D32A6421DE4E04A00535EA3 /* ArchiveViewController.swift in Sources */,
 				76190DF01DC97DCD002EA6E6 /* MoreInfoViewController.swift in Sources */,
+				76C424CA1E1729AD00C01B39 /* SupportViewModel.swift in Sources */,
+				76C424C61E17258B00C01B39 /* ContactViewController.swift in Sources */,
 				769F48571DC6A92900554487 /* Style.swift in Sources */,
 				4D3296311DBA8CCE0016BE5A /* Constants.swift in Sources */,
 				4D31BD391E09C4EC004260F2 /* InfoCell.swift in Sources */,

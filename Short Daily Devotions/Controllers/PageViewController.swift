@@ -35,7 +35,8 @@ class PageViewController: UIViewController {
     private func setTitle() { title = viewModel.titleForPage() }
     
     private func setupView() {
-        title = viewModel.titleForPage()
+        view.backgroundColor = Style.grayLight
+        addActivityIndicator()
         addTextView()
     }
     
@@ -57,12 +58,26 @@ class PageViewController: UIViewController {
     private func addTextView() {
         textView = UITextView()
         guard let textView = textView else { return }
-        textView.text = viewModel.pageContent()
+        
+        let content = viewModel.pageContent()
+        let attrString = NSMutableAttributedString(string: content)
+        let pgStyle = NSMutableParagraphStyle()
+        pgStyle.lineSpacing = 3
+        pgStyle.paragraphSpacing = 12
+
+        let attrs: [String: Any] = [
+            NSParagraphStyleAttributeName: pgStyle,
+            NSFontAttributeName: Style.lightFont(withSize: 16)
+        ]
+        attrString.addAttributes(attrs, range: NSMakeRange(0, content.characters.count))
+        textView.attributedText = attrString
+        layout(textView)
+    }
+    
+    private func layout(_ textView: UITextView) {
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 8, bottom: 3, right: 8)
         view.addSubview(textView)
-        view.autoPinEdge(.top, to: .top, of: view, withOffset: 20)
-        view.autoPinEdge(.leading, to: .leading, of: view, withOffset: 20)
-        view.autoPinEdge(.trailing, to: .trailing, of: view, withOffset: 20)
-        view.autoPinEdge(.bottom, to: .bottom, of: view, withOffset: 0)
+        textView.autoPinEdgesToSuperviewEdges()
     }
 
 }

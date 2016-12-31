@@ -59,11 +59,10 @@ extension MoreInfoViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = viewModel?.viewController(forIndexPath: indexPath) else { return }
-        navigationController?.show(vc, sender: self)
+        guard let vc = viewModel?.viewController(forIndexPath: indexPath),
+            let nav = navigationController else { return }
+        nav.show(vc, sender: self)
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
-    }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0.1 }
 }

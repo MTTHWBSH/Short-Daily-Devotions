@@ -10,10 +10,6 @@ import UIKit
 
 class Configuration {
 
-    static func setupServices(_ launchOptions: [AnyHashable: Any]?) {
-        
-    }
-
     static func run(_ window: UIWindow?) {
         Style.themeUI()
         let nc = UINavigationController(rootViewController: PostsViewController(viewModel: PostsViewModel(postsURL: Constants.kAllPostsURL)))
