@@ -18,6 +18,7 @@ class PageViewController: UIViewController {
     init(viewModel: PageViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.render = { [weak self] in self?.render() }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,9 +28,12 @@ class PageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        viewModel.render = { [weak self] _ in self?.removeActivityIndicator();
-                                              self?.setTitle();
-                                              self?.addTextView() }
+    }
+    
+    private func render() {
+        setTitle()
+        addTextView()
+        removeActivityIndicator()
     }
     
     private func setTitle() { title = viewModel.titleForPage() }

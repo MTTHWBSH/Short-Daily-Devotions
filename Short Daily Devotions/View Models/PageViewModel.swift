@@ -11,7 +11,7 @@ import Alamofire
 class PageViewModel: ViewModel {
     
     private var pageID: String
-    private var page: Post? { didSet { render?() } }
+    private var page: Post?
     
     init(pageID: String) {
         self.pageID = pageID
@@ -27,6 +27,7 @@ class PageViewModel: ViewModel {
                     let dict = json as? NSDictionary,
                     let page = Post.from(dict) else { return }
                 self?.page = page
+                self?.render?()
                 completion?()
         }
     }
