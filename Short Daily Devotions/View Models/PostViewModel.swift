@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 enum PostSections: Int {
     case details, body, count
@@ -26,6 +27,31 @@ class PostViewModel: ViewModel {
     init(post: Post) {
         self.post = post
         super.init()
+    }
+    
+    func refreshPost(completion: ((Bool) -> Void)?) {
+        let params: [String: Any] = [
+            "page": 1,
+            "per_page": 1
+        ]
+        
+        Alamofire.request("\(Constants.kPostsBaseURL)", parameters: params)
+            .responseJSON { [weak self] response in
+                guard let data = response.data,
+                    let json = try? JSONSerialization.jsonObject(with: data, options: []),
+                    let posts = json as? NSArray else { completion?(false); return }
+                self?.unwrap(postArray: posts)
+                completion?(posts.count >= 1 ? true : false)
+        }
+    }
+    
+    private func unwrap(postArray: NSArray) {
+        postArray.forEach { [weak self] json in
+            guard let postDict = json as? NSDictionary,
+                let post = Post.from(postDict) else { return }
+            self?.post = post
+        }
+        render?()
     }
     
     var dateString: String? {

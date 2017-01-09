@@ -16,6 +16,7 @@ class ArchiveViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupRefreshControl()
         viewModel?.render = { [weak self] in self?.render() }
     }
     
@@ -33,11 +34,26 @@ class ArchiveViewController: UITableViewController {
         tableView.backgroundColor = Style.grayLight
         tableView.estimatedRowHeight = tableView.frame.height
         tableView.rowHeight = UITableViewAutomaticDimension
-        
     }
     
     private func registerCells() {
         tableView.register(PostExcerptCell.self, forCellReuseIdentifier: PostExcerptCell.kReuseIdentifier)
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.tintColor = Style.blue
+        refreshControl?.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc private func refresh() {
+        refreshControl?.beginRefreshing()
+        viewModel?.loadPosts(postsURL: Constants.kPostsBaseURL,
+                             page: 1,
+                             refresh: true,
+                             completion: {  [weak self] _ in self?.refreshControl?.endRefreshing()
+        })
     }
     
 }
@@ -54,7 +70,7 @@ extension ArchiveViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let post = viewModel?.post(forIndexPath: indexPath),
             let vm = viewModel?.postViewModel(forPost: post) else { return }
-        let vc = PostViewController()
+        let vc = PostViewController(refreshEnabled: false)
         vc.viewModel = vm
         navigationController?.show(vc, sender: self)
     }

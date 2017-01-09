@@ -19,10 +19,11 @@ class PostsViewController: UIPageViewController {
     var postVC: PostViewController
     var archiveVC: ArchiveViewController
     var activityIndicator: UIActivityIndicatorView?
+    var refreshControl: UIRefreshControl?
     
     init(viewModel: PostsViewModel) {
         self.viewModel = viewModel
-        self.postVC = PostViewController()
+        self.postVC = PostViewController(refreshEnabled: true)
         self.archiveVC = ArchiveViewController()
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [:])
         self.viewModel.render = { [weak self] in self?.render() }

@@ -11,12 +11,23 @@ import PureLayout
 
 class PostViewController: UITableViewController {
     
+    let refreshEnabled: Bool
     var viewModel: PostViewModel?
+    
+    init(refreshEnabled: Bool) {
+        self.refreshEnabled = refreshEnabled
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.render = { [weak self] in self?.render() }
         setupTableView()
+        if refreshEnabled { setupRefreshControl() }
     }
     
     private func render() {
@@ -31,6 +42,18 @@ class PostViewController: UITableViewController {
         tableView.estimatedRowHeight = tableView.frame.height
         tableView.rowHeight = UITableViewAutomaticDimension
         
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.tintColor = Style.blue
+        refreshControl?.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc private func refresh() {
+        refreshControl?.beginRefreshing()
+        viewModel?.refreshPost(completion: { [weak self] _ in self?.refreshControl?.endRefreshing() })
     }
     
     private func registerCells() {

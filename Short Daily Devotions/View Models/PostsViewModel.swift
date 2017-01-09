@@ -11,31 +11,32 @@ import Alamofire
 class PostsViewModel: ViewModel {
     
     private var posts: [Post]
-    private var postsURL: String
     private var currentPage = 1
+    var postsURL: String
     var allPostsLoaded = false
     
     init(postsURL: String) {
         self.posts = []
         self.postsURL = postsURL
         super.init()
-        self.loadPosts(postsURL: postsURL, page: 1, completion: nil)
+        self.loadPosts(postsURL: postsURL, page: 1, refresh: false, completion: nil)
     }
     
-    private func loadPosts(postsURL: String, page: Int, completion: ((Bool) -> Void)?) {
+    func loadPosts(postsURL: String, page: Int, refresh: Bool, completion: ((Bool) -> Void)?) {
         let params: [String: Any] = ["page": page]
         Alamofire.request(postsURL, parameters: params)
             .responseJSON { [weak self] response in
             guard let data = response.data,
                 let json = try? JSONSerialization.jsonObject(with: data, options: []),
                 let posts = json as? NSArray else { completion?(false); return }
-            self?.unwrap(postArray: posts)
+                self?.unwrap(postArray: posts, refresh: refresh)
             completion?(posts.count >= 1 ? true : false)
         }
     }
     
-    private func unwrap(postArray: NSArray) {
+    private func unwrap(postArray: NSArray, refresh: Bool) {
         if postArray.count <= 0 { allPostsLoaded = true; return }
+        if refresh { posts = [] }
         postArray.forEach { json in
             guard let postDict = json as? NSDictionary,
                 let post = Post.from(postDict) else { return }
@@ -52,7 +53,7 @@ class PostsViewModel: ViewModel {
     
     func nextPageOfPosts(completion: ((Void) -> Void)?) {
         let nextPage = currentPage + 1
-        loadPosts(postsURL: postsURL, page: nextPage) { [weak self] morePosts in
+        loadPosts(postsURL: postsURL, page: nextPage, refresh: false) { [weak self] morePosts in
             guard let strongSelf = self else { return }
             strongSelf.currentPage = morePosts ? nextPage : strongSelf.currentPage
             completion?()

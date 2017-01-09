@@ -10,9 +10,9 @@ struct Constants {
 
     // MARK: URLs
 
-    static let kBaseURL     = "http://shortdailydevotions.com/wp-json/wp/v2"
-    static let kAllPostsURL = "\(kBaseURL)/posts"
-    static let kPageBaseURL = "\(kBaseURL)/pages/"
+    static let kBaseURL             = "http://shortdailydevotions.com/wp-json/wp/v2"
+    static let kPostsBaseURL        = "\(kBaseURL)/posts"
+    static let kPageBaseURL         = "\(kBaseURL)/pages/"
         
     // MARK: Font names
         
